@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.2)  21 MAR 2016 17:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.2)  22 MAR 2016 13:01
 entering extended mode
 **./WissArbeit.tex
 (WissArbeit.tex
@@ -1329,7 +1329,6 @@ Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
 Package caption Info: sidecap package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package caption Info: We need package `ragged2e' on input line 55.
 \c@lstlisting=\count184
 LaTeX Info: Redefining \dots on input line 55.
 LaTeX Info: Redefining \microtypecontext on input line 55.
@@ -1381,7 +1380,7 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
 ) (content/Titel.tex
-<images/Titel/uni_header.pdf, id=105, 1562.08594pt x 222.07968pt>
+<images/Titel/uni_header.pdf, id=69, 1562.08594pt x 222.07968pt>
 File: images/Titel/uni_header.pdf Graphic file (type pdf)
 
 <use images/Titel/uni_header.pdf>
@@ -1435,7 +1434,7 @@ LaTeX Font Info:    Try loading font information for TS1+lmr on input line 30.
 ("C:\Users\Peter\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\ts1lmr.fd"
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<images/Titel/uni_siegel.pdf, id=106, 503.66568pt x 513.40909pt>
+<images/Titel/uni_siegel.pdf, id=70, 503.66568pt x 513.40909pt>
 File: images/Titel/uni_siegel.pdf Graphic file (type pdf)
 
 <use images/Titel/uni_siegel.pdf>
@@ -1677,173 +1676,6 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 17.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 17.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 21.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 21.
-Package scrkbase Info: You've told me to use the font selection of the element
-(scrkbase)             `sectioning' that is an alias of element `disposition'
-(scrkbase)              on input line 32.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 32.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 32.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 32.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 32.
-pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.32 
-      [2
-
-]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 33.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 33.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 39.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 39.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 65.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 65.
- <images/2-Hauptteil/uni_logo.png, id=200, 647.41875pt x 284.06125pt>
-File: images/2-Hauptteil/uni_logo.png Graphic file (type png)
-
-<use images/2-Hauptteil/uni_logo.png>
-Package pdftex.def Info: images/2-Hauptteil/uni_logo.png used on input line 71.
-
-(pdftex.def)             Requested size: 127.26273pt x 55.83598pt.
-File: images/2-Hauptteil/uni_logo.png Graphic file (type png)
- <use images/2-Hauptteil/uni_logo.png>
-Package pdftex.def Info: images/2-Hauptteil/uni_logo.png used on input line 77.
-
-(pdftex.def)             Requested size: 127.26273pt x 55.83598pt.
-File: images/2-Hauptteil/uni_logo.png Graphic file (type png)
-
-<use images/2-Hauptteil/uni_logo.png>
-Package pdftex.def Info: images/2-Hauptteil/uni_logo.png used on input line 79.
-
-(pdftex.def)             Requested size: 127.26273pt x 55.83598pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 83.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 83.
- (tables/2-Hauptteil/Tabelle.tex)
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 91.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 91.
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 93.
-
-("C:\Users\Peter\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-Package microtype Info: Loading generic settings for font family
-(microtype)             `lmtt' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-Package scrkbase Info: You've told me to use the font selection of the element
-(scrkbase)             `sectioning' that is an alias of element `disposition'
-(scrkbase)              on input line 95.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 95.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 95.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 95.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 95.
-
-[3]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 95.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 95.
-Package acronym Info: Label `acro:CDMA' newly defined as it shall be overridden
-
-although it is yet undefined on input line 99.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 101.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 101.
-Package scrkbase Info: You've told me to use the font selection of the element
-(scrkbase)             `sectioning' that is an alias of element `disposition'
-(scrkbase)              on input line 105.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 105.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 105.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 105.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 105.
- [4 <./images/2-Hauptteil/uni_logo.png>]
-
-Package natbib Warning: Citation `Laudon.2010' on page 5 undefined on input lin
-e 110.
-
-
-Package natbib Warning: Citation `Laudon.2010' on page 5 undefined on input lin
-e 112.
-
-
-Package natbib Warning: Citation `Laudon.2010' on page 5 undefined on input lin
-e 114.
-
-
-Package natbib Warning: Citation `Laudon.2010' on page 5 undefined on input lin
-e 116.
-
-
-Package natbib Warning: Citation `Laudon.2010' on page 5 undefined on input lin
-e 118.
-
-
-Package natbib Warning: Citation `Laudon.2010' on page 5 undefined on input lin
-e 126.
-
-
-Package natbib Warning: Citation `Laudon.2010' on page 5 undefined on input lin
-e 131.
-
-Package scrkbase Info: You've told me to use the font selection of the element
-(scrkbase)             `sectioning' that is an alias of element `disposition'
-(scrkbase)              on input line 132.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 132.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 132.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 132.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 132.
-[5]
-
-Package natbib Warning: Citation `Bartsch.2012' on page 6 undefined on input li
-ne 139.
-
-Package microtype Info: Character `029' is missing
-(microtype)             in font `T1/lmr/m/sc/10.95'.
-(microtype)             Ignoring protrusion settings for this character.
-
-Underfull \hbox (badness 10000) in paragraph at lines 138--140
-
- []
-
-
-Package natbib Warning: Citation `Bartsch.2012' on page 6 undefined on input li
-ne 141.
-
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 143.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 143.
 ) (content/3-Schlussfolgerung.tex
 Package scrkbase Info: You've told me to use the font selection of the element
 (scrkbase)             `sectioning' that is an alias of element `disposition'
@@ -1856,7 +1688,14 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
- [6]
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1 \chapter
+            {Schlussfolgerung} [2
+
+]
 chapter 3.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
@@ -1874,7 +1713,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 90.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 90.
- [7
+ [3
 
 ] (WissArbeit.bbl
 chapter without number
@@ -1941,7 +1780,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--106
  []
 
 
-Package natbib Warning: There were undefined citations.
+Package caption Warning: Unused \captionsetup[subfloat] on input line 1340.
+See the caption package documentation for explanation.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 108.
 Package babel Info: Redefining ngerman shorthand "|
@@ -2073,10 +1913,9 @@ lstlang1.sty    2015/06/04 1.6 listings language file
    units.sty    1998/08/04 v0.9b Typesetting units
 nicefrac.sty    1998/08/04 v0.9b Nice fractions
 multicol.sty    2015/08/19 v1.8n multicolumn formatting (FMi)
-ellipsis.sty    2004/9/28 v1.6 ellipsis: fixes spacing around \global\let .\ker
-n \fontdimen 3\font .\kern \fontdimen 3\font .\kern \fontdimen 3\font .\kern \f
-ontdimen 3\font .\kern \fontdimen 3\font .\kern \fontdimen 3\font .\kern \fontd
-imen 3\font .\kern \fontdimen 3\font .\kern \fontdimen 3\font 
+ellipsis.sty    2004/9/28 v1.6 ellipsis: fixes spacing around \global\let \T1\t
+extellipsis .\kern \fontdimen 3\font .\kern \fontdimen 3\font .\kern \fontdimen
+ 3\font \T1\textellipsis 
 setspace.sty    2011/12/19 v6.7a set line spacing
    t1lmr.fd    2009/10/30 v1.6 Font defs for Latin Modern
 scrpage2.sty    2015/10/03 v3.19a KOMA-Script package (page head and foot)
@@ -2141,11 +1980,6 @@ content/0-Abstract.tex
 content/Abkuerzungsverzeichnis.tex
 content/1-Einleitung.tex
 content/2-Hauptteil.tex
-images/2-Hauptteil/uni_logo.png
-images/2-Hauptteil/uni_logo.png
-images/2-Hauptteil/uni_logo.png
-tables/2-Hauptteil/Tabelle.tex
-  t1lmtt.fd    2009/10/30 v1.6 Font defs for Latin Modern
 content/3-Schlussfolgerung.tex
 WissArbeit.bbl
 babelbst.tex
@@ -2155,36 +1989,27 @@ content/Erklaerung.tex
 
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 108.
 Package rerunfilecheck Info: File `WissArbeit.out' has not changed.
-(rerunfilecheck)             Checksum: B68F2D1B7603564F20A21F9DD16F460B;1561.
+(rerunfilecheck)             Checksum: AE01A7E3B7C7382272E8CEE9378DB327;985.
  ) 
 Here is how much of TeX's memory you used:
- 19479 strings out of 493622
- 311195 string characters out of 3135140
- 532828 words of memory out of 3000000
- 22199 multiletter control sequences out of 15000+200000
- 96321 words of font info for 123 fonts, out of 3000000 for 9000
+ 19257 strings out of 493622
+ 307762 string characters out of 3135140
+ 527828 words of memory out of 3000000
+ 22067 multiletter control sequences out of 15000+200000
+ 65401 words of font info for 90 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 57i,12n,77p,827b,518s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/Peter/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.en
-c}{C:/Users/Peter/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ts1.e
-nc}<C:/Users/Peter/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmbx
-10.pfb><C:/Users/Peter/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/
-lmbx9.pfb><C:/Users/Peter/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
-lm/lmcsc10.pfb><C:/Users/Peter/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
-blic/lm/lmr10.pfb><C:/Users/Peter/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
-/public/lm/lmr8.pfb><C:/Users/Peter/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
-e1/public/lm/lmr9.pfb><C:/Users/Peter/AppData/Local/Programs/MiKTeX 2.9/fonts/t
-ype1/public/lm/lmri10.pfb><C:/Users/Peter/AppData/Local/Programs/MiKTeX 2.9/fon
-ts/type1/public/lm/lmss10.pfb><C:/Users/Peter/AppData/Local/Programs/MiKTeX 2.9
-/fonts/type1/public/lm/lmss12.pfb><C:/Users/Peter/AppData/Local/Programs/MiKTeX
- 2.9/fonts/type1/public/lm/lmss17.pfb><C:/Users/Peter/AppData/Local/Programs/Mi
-KTeX 2.9/fonts/type1/public/lm/lmss9.pfb><C:/Users/Peter/AppData/Local/Programs
-/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Peter/AppData/Local/Pr
-ograms/MiKTeX 2.9/fonts/type1/public/lm/lmsso9.pfb><C:/Users/Peter/AppData/Loca
-l/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtt9.pfb>
-Output written on WissArbeit.pdf (18 pages, 526944 bytes).
+ 57i,11n,77p,827b,518s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/Peter/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ts1.e
+nc}{C:/Users/Peter/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.e
+nc}<C:/Users/Peter/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr1
+0.pfb><C:/Users/Peter/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/l
+mss10.pfb><C:/Users/Peter/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
+lm/lmss12.pfb><C:/Users/Peter/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
+lic/lm/lmss17.pfb><C:/Users/Peter/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
+/public/lm/lmssbx10.pfb>
+Output written on WissArbeit.pdf (14 pages, 302527 bytes).
 PDF statistics:
- 332 PDF objects out of 1000 (max. 8388607)
- 66 named destinations out of 1000 (max. 500000)
- 37600 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 194 PDF objects out of 1000 (max. 8388607)
+ 34 named destinations out of 1000 (max. 500000)
+ 22675 words of extra memory for PDF output out of 24883 (max. 10000000)
 
