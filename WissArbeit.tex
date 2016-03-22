@@ -1,0 +1,109 @@
+%% Dokumentenklasse (Koma Script) -----------------------------------------
+\documentclass[%
+   %draft,					% Entwurfsstadium
+   final,      			% fertiges Dokument
+	 % --- Paper Settings ---
+   paper=a4,				% Papierformat
+   paper=portrait, 	% landscape
+   pagesize=auto, 	% driver
+   % --- Base Font Size ---
+   fontsize=11pt,		%
+	 % --- Koma Script Version ---
+   version=last, %
+ ]{scrbook} % Classes: scrartcl, scrreprt, scrbook
+
+% Encoding der Dateien (sonst funktionieren Umlaute nicht)
+% Fuer Linux -> utf8
+% Fuer Windows, alte Linux Distributionen -> latin1
+
+% Empfohlen latin1, da einige Pakete mit utf8 Zeichen nicht
+% funktionieren, z.B: listings, soul.
+\usepackage[latin1]{inputenc}
+%\usepackage[ansinew]{inputenc}
+%\usepackage[utf8]{inputenc}
+%\usepackage{ucs}
+%\usepackage[utf8x]{inputenc}
+
+%%% Preambel
+\input{preambel/settings}
+\input{preambel/preambel}
+%
+%%%% Neue Befehle
+\input{macros/newcommands}
+\input{macros/tablecommands}
+
+%%% Silbentrennung
+\input{preambel/hyphenation}
+
+%% Dokument Beginn %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% - Deckblatt
+% - Zusammenfassung
+% - Abstract
+% - Inahltsverzeichnis
+% - Abbildungsverzeichnis (ggf.)
+% - Tabellenverzeichnis (ggf.)
+% - Abkürzungsverzeichnis (ggf.)
+% -	Ausarbeitung
+%		-	Einleitung
+%		- Hauptteil
+%		- Schlussfolgerung
+% Literaturverzeichnis
+% - Anhang (ggf.)
+% - Eidesstaatliche Erklärung
+
+\begin{document}
+% Deckblatt
+\input{content/Titel}
+
+\frontmatter
+\input{content/0-Zusammenfassung}
+\input{content/0-Abstract}
+\cleardoublepage
+
+%Inahltsverzeichnis
+\addcontentsline{toc}{chapter}{Inhaltsverzeichnis}
+\tableofcontents
+
+% Abbildungs- und Tabellenverzeichnis
+\listoffigures
+\listoftables
+% Abkürzungsverzeichnis
+\addcontentsline{toc}{chapter}{Abkürzungsverzeichnis}
+\input{content/Abkuerzungsverzeichnis}
+
+% Hauptteil
+\mainmatter
+
+%Zeilenabstand
+%\onehalfspacing
+%\recalctypearea
+
+%Setze Zähler für den Hauptteil neu
+\setcounter{page}{1}
+\setcounter{chapter}{0}
+
+% Einbinden der einzlenen Kapitel der Ausarbeitung
+\input{content/1-Einleitung}
+\input{content/2-Hauptteil}
+\input{content/3-Schlussfolgerung}
+\clearpage
+
+% Literaturverzeichnis
+\pagenumbering{Roman}
+\bibliography{bibliography/Literatur}
+\clearpage
+
+% Anhang
+\appendix
+\setcounter{page}{1}
+\pagenumbering{arabic}
+\input{content/Anhang}
+\clearpage
+
+% Eidesstaatliche Erklärung
+\input{content/Erklaerung.tex}
+
+%% Dokument Ende %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+
