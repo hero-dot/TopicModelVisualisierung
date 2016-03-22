@@ -5,13 +5,17 @@
 \BOOKMARK [0][-]{chapter*.7}{Tabellenverzeichnis}{}% 5
 \BOOKMARK [0][-]{chapter*.7}{Abk\374rzungsverzeichnis}{}% 6
 \BOOKMARK [0][-]{chapter.1}{Einleitung}{}% 7
-\BOOKMARK [0][-]{chapter.2}{Hauptteil}{}% 8
-\BOOKMARK [1][-]{section.2.1}{Grundlagen}{chapter.2}% 9
-\BOOKMARK [2][-]{subsection.2.1.1}{Topic Models}{section.2.1}% 10
-\BOOKMARK [2][-]{subsection.2.1.2}{Darstellungsverfahren}{section.2.1}% 11
-\BOOKMARK [1][-]{section.2.2}{Visualisierung der Ergebnisse}{chapter.2}% 12
-\BOOKMARK [0][-]{chapter.3}{Schlussfolgerung}{}% 13
-\BOOKMARK [0][-]{chapter*.14}{Literaturverzeichnis}{}% 14
-\BOOKMARK [0][-]{chapter*.15}{Anhang}{}% 15
-\BOOKMARK [1][-]{section.A.1}{Materialien}{chapter*.15}% 16
-\BOOKMARK [1][-]{section.A.2}{Gespr\344chsprotokolle}{chapter*.15}% 17
+\BOOKMARK [0][-]{chapter.2}{Grundlagen}{}% 8
+\BOOKMARK [1][-]{section.2.1}{Topic Models}{chapter.2}% 9
+\BOOKMARK [2][-]{subsection.2.1.1}{Probabilistic Latent Semantic Analysis}{section.2.1}% 10
+\BOOKMARK [2][-]{subsection.2.1.2}{Latent Dirichlet Allocation}{section.2.1}% 11
+\BOOKMARK [1][-]{section.2.2}{Darstellungsverfahren}{chapter.2}% 12
+\BOOKMARK [2][-]{subsection.2.2.1}{Topic Browser}{section.2.2}% 13
+\BOOKMARK [2][-]{subsection.2.2.2}{LDAvis}{section.2.2}% 14
+\BOOKMARK [2][-]{subsection.2.2.3}{Termite}{section.2.2}% 15
+\BOOKMARK [0][-]{chapter.3}{Visualisierung der Ergebnisse}{}% 16
+\BOOKMARK [0][-]{chapter.4}{Schlussfolgerung}{}% 17
+\BOOKMARK [0][-]{chapter*.14}{Literaturverzeichnis}{}% 18
+\BOOKMARK [0][-]{chapter*.15}{Anhang}{}% 19
+\BOOKMARK [1][-]{section.A.1}{Materialien}{chapter*.15}% 20
+\BOOKMARK [1][-]{section.A.2}{Gespr\344chsprotokolle}{chapter*.15}% 21
