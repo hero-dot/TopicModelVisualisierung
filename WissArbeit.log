@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.2)  22 MAR 2016 13:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.2)  22 MAR 2016 17:23
 entering extended mode
 **./WissArbeit.tex
 (WissArbeit.tex
@@ -1634,7 +1634,27 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
-) (content/2-Hauptteil.tex
+Package scrkbase Info: You've told me to use the font selection of the element
+(scrkbase)             `sectioning' that is an alias of element `disposition'
+(scrkbase)              on input line 28.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 28.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 28.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 28.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 28.
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.28 \item \cite
+                [1]{Blei.2009} Topic Models sind hierarchische Bayes Modelle...
+[1
+
+
+]) (content/2-Hauptteil.tex
 Package scrkbase Info: You've told me to use the font selection of the element
 (scrkbase)             `sectioning' that is an alias of element `disposition'
 (scrkbase)              on input line 1.
@@ -1646,15 +1666,12 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1 \chapter
-            {Hauptteil} [1
-
-
-]
+            {Hauptteil} [2]
 chapter 2.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
@@ -1688,12 +1705,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
-pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1 \chapter
-            {Schlussfolgerung} [2
+ [3
 
 ]
 chapter 3.
@@ -1713,7 +1725,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 90.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 90.
- [3
+ [4
 
 ] (WissArbeit.bbl
 chapter without number
@@ -1722,9 +1734,9 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
 (babelbst.tex)
-
-Package natbib Warning: Empty `thebibliography' environment on input line 8.
-
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/lmr/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
 )
 Package scrkbase Info: You've told me to use the font selection of the element
 (scrkbase)             `sectioning' that is an alias of element `disposition'
@@ -1989,27 +2001,29 @@ content/Erklaerung.tex
 
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 108.
 Package rerunfilecheck Info: File `WissArbeit.out' has not changed.
-(rerunfilecheck)             Checksum: AE01A7E3B7C7382272E8CEE9378DB327;985.
+(rerunfilecheck)             Checksum: F51582522F207F7D1DD9C7AF3E2C0BC6;985.
  ) 
 Here is how much of TeX's memory you used:
- 19257 strings out of 493622
- 307762 string characters out of 3135140
- 527828 words of memory out of 3000000
- 22067 multiletter control sequences out of 15000+200000
- 65401 words of font info for 90 fonts, out of 3000000 for 9000
+ 19331 strings out of 493622
+ 308939 string characters out of 3135140
+ 528828 words of memory out of 3000000
+ 22095 multiletter control sequences out of 15000+200000
+ 74137 words of font info for 109 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 57i,11n,77p,827b,518s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/Peter/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ts1.e
-nc}{C:/Users/Peter/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.e
-nc}<C:/Users/Peter/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr1
-0.pfb><C:/Users/Peter/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/l
-mss10.pfb><C:/Users/Peter/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
-lm/lmss12.pfb><C:/Users/Peter/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
-lic/lm/lmss17.pfb><C:/Users/Peter/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
-/public/lm/lmssbx10.pfb>
-Output written on WissArbeit.pdf (14 pages, 302527 bytes).
+ 57i,11n,77p,827b,551s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/Peter/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.en
+c}{C:/Users/Peter/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ts1.e
+nc}<C:/Users/Peter/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmcs
+c10.pfb><C:/Users/Peter/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm
+/lmr10.pfb><C:/Users/Peter/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
+/lm/lmri10.pfb><C:/Users/Peter/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
+blic/lm/lmss10.pfb><C:/Users/Peter/AppData/Local/Programs/MiKTeX 2.9/fonts/type
+1/public/lm/lmss12.pfb><C:/Users/Peter/AppData/Local/Programs/MiKTeX 2.9/fonts/
+type1/public/lm/lmss17.pfb><C:/Users/Peter/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/public/lm/lmssbx10.pfb>
+Output written on WissArbeit.pdf (15 pages, 359351 bytes).
 PDF statistics:
- 194 PDF objects out of 1000 (max. 8388607)
- 34 named destinations out of 1000 (max. 500000)
- 22675 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 224 PDF objects out of 1000 (max. 8388607)
+ 44 named destinations out of 1000 (max. 500000)
+ 26771 words of extra memory for PDF output out of 29859 (max. 10000000)
 

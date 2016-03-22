@@ -1,8 +1,37 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{New10}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{URL }
 \input{babelbst.tex}
 \newcommand{\Capitalize}[1]{\uppercase{#1}}
 \newcommand{\capitalize}[1]{\expandafter\Capitalize#1}
+
+\bibitem[Ble09]{Blei.2009}
+\textsc{Blei}, David~M. \bbland{} \textsc{Lafferty}, John~D.: Visualizing
+  topics with multi-word expressions. \textit{arXiv preprint arXiv:0907.1013}
+  (2009)
+
+\bibitem[Cha12]{Chaney.2012}
+\textsc{Chaney}, Allison June-Barlow \bbland{} \textsc{Blei}, David~M.:
+  Visualizing Topic Models, \bblin{}: \textit{ICWSM}
+
+\bibitem[New10]{Newman.2010}
+\textsc{Newman}, David; \textsc{Baldwin}, Timothy; \textsc{Cavedon}, Lawrence;
+  \textsc{Huang}, Eric; \textsc{Karimi}, Sarvnaz; \textsc{Martinez}, David;
+  \textsc{Scholer}, Falk \bbland{} \textsc{Zobel}, Justin: Visualizing search
+  results and document collections using topic maps. \textit{Web Semantics:
+  Science, Services and Agents on the World Wide Web} (2010),
+  \bblvol{}~8(2):\bblpp{} 169--175
+
+\bibitem[Sie14]{Sievert.2014}
+\textsc{Sievert}, Carson \bbland{} \textsc{Shirley}, Kenneth~E.: LDAvis: A
+  method for visualizing and interpreting topics, \bblin{}: \textit{Proceedings
+  of the workshop on interactive language learning, visualization, and
+  interfaces}, \bblpp{} 63--70
+
+\bibitem[Sny13]{Snyder.2013}
+\textsc{Snyder}, Justin; \textsc{Knowles}, Rebecca; \textsc{Dredze}, Mark;
+  \textsc{Gormley}, Matthew~R. \bbland{} \textsc{Wolfe}, Travis: Topic Models
+  and Metadata for Visualizing Text Corpora, \bblin{}: \textit{HLT-NAACL},
+  \bblpp{} 5--9
 
 \end{thebibliography}
