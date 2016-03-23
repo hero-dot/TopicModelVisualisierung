@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.2)  22 MAR 2016 17:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.2)  23 MAR 2016 11:30
 entering extended mode
 **./WissArbeit.tex
 (WissArbeit.tex
@@ -1380,7 +1380,7 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
 ) (content/Titel.tex
-<images/Titel/uni_header.pdf, id=85, 1562.08594pt x 222.07968pt>
+<images/Titel/uni_header.pdf, id=97, 1562.08594pt x 222.07968pt>
 File: images/Titel/uni_header.pdf Graphic file (type pdf)
 
 <use images/Titel/uni_header.pdf>
@@ -1434,7 +1434,7 @@ LaTeX Font Info:    Try loading font information for TS1+lmr on input line 30.
 ("C:\Users\Peter\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\ts1lmr.fd"
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<images/Titel/uni_siegel.pdf, id=86, 503.66568pt x 513.40909pt>
+<images/Titel/uni_siegel.pdf, id=98, 503.66568pt x 513.40909pt>
 File: images/Titel/uni_siegel.pdf Graphic file (type pdf)
 
 <use images/Titel/uni_siegel.pdf>
@@ -1682,48 +1682,60 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 7.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 10.
+(babel)             in language  on input line 9.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 10.
+(babel)             in language  on input line 9.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 13.
+(babel)             in language  on input line 12.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 13.
+(babel)             in language  on input line 12.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 16.
+(babel)             in language  on input line 15.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 16.
+(babel)             in language  on input line 15.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 19.
+(babel)             in language  on input line 18.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 19.
+(babel)             in language  on input line 18.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 22.
+(babel)             in language  on input line 21.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 22.
+(babel)             in language  on input line 21.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 25.
+(babel)             in language  on input line 24.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 25.
+(babel)             in language  on input line 24.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 27.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 27.
 Package scrkbase Info: You've told me to use the font selection of the element
 (scrkbase)             `sectioning' that is an alias of element `disposition'
-(scrkbase)              on input line 28.
+(scrkbase)              on input line 30.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 28.
+(babel)             in language  on input line 30.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 28.
+(babel)             in language  on input line 30.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 28.
+(babel)             in language  on input line 30.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 28.
+(babel)             in language  on input line 30.
 [3
 
 ]
 chapter 3.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 28.
+(babel)             in language  on input line 30.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 28.
+(babel)             in language  on input line 30.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 33.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 33.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 36.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 36.
 ) (content/3-Schlussfolgerung.tex
 Package scrkbase Info: You've told me to use the font selection of the element
 (scrkbase)             `sectioning' that is an alias of element `disposition'
@@ -2032,13 +2044,13 @@ content/Erklaerung.tex
 
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 108.
 Package rerunfilecheck Info: File `WissArbeit.out' has not changed.
-(rerunfilecheck)             Checksum: 64D84A713454BF79A6A4F3D96488D1CB;1269.
+(rerunfilecheck)             Checksum: 8454FAE2756C8AB593F193376325F2F8;1546.
  ) 
 Here is how much of TeX's memory you used:
- 19348 strings out of 493622
- 309279 string characters out of 3135140
+ 19360 strings out of 493622
+ 309379 string characters out of 3135140
  528828 words of memory out of 3000000
- 22107 multiletter control sequences out of 15000+200000
+ 22116 multiletter control sequences out of 15000+200000
  74137 words of font info for 109 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  57i,11n,77p,827b,551s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2052,9 +2064,9 @@ blic/lm/lmss10.pfb><C:/Users/Peter/AppData/Local/Programs/MiKTeX 2.9/fonts/type
 1/public/lm/lmss12.pfb><C:/Users/Peter/AppData/Local/Programs/MiKTeX 2.9/fonts/
 type1/public/lm/lmss17.pfb><C:/Users/Peter/AppData/Local/Programs/MiKTeX 2.9/fo
 nts/type1/public/lm/lmssbx10.pfb>
-Output written on WissArbeit.pdf (16 pages, 363938 bytes).
+Output written on WissArbeit.pdf (16 pages, 366413 bytes).
 PDF statistics:
- 249 PDF objects out of 1000 (max. 8388607)
- 49 named destinations out of 1000 (max. 500000)
- 26803 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 264 PDF objects out of 1000 (max. 8388607)
+ 52 named destinations out of 1000 (max. 500000)
+ 26827 words of extra memory for PDF output out of 29859 (max. 10000000)
 
