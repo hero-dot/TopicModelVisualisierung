@@ -15,16 +15,35 @@ Aufgrund einiger Unzulänglichkeiten in dem Verfahren wurde von Blei das Verfahre
 \subsection{Vorgehen bei der Latent Dirichlet Allocation}
 \label{sec:Vorgehen}
 
-Beschreibung des LDA Verfahrens im Detail. 
-Eingehen auf die Verfahren von Steyvers und Griffiths\cite{Griffiths.2002,Griffiths.2004,Griffiths.2003}
+Bei der Latent Dirichlet Allocation handelt es sich um ein statistisches Modell eines Textkorpus. Die zugrundeliegende Idee ist, dass Dokumente als Kombination aus Themen dargestellt werden können, wobei jedes Thema als Verteilung über die im Text vorhandenen Wörter angesehen werden kann. Das LDA-Modell dient nicht nur der Verarbeitung von Texten, es kann auch in anderen Bereichen angewendet werden. Wörter sind die Basiseinheit der Daten als Teil eines Wörterbuchs und werden mit einem Einheitsvektor beschrieben. Ein Dokument ist eine Abfolge von Wörtern und ein Korpus ist eine Sammlung von Dokumenten. \cite[995 f.]{Blei.2003}
+Die Themen sind $\beta_{1:K}$ bei den jedes $\beta_{k}$ eine Verteilung über das Vokabular des Korpus ist. $\theta_{d}$ ist das Verhältnis der Themen für das dte Dokument, wobei $\theta_{d,k}$ der Anteil von Thema d an Dokument k ist. Die dem dten Dokument zugewiesenen Themen sind $z_{d}$, wobei $z_{d,n}$ das dem nten Wort zugewiesene Thema in Dokument d ist. Die beobachteten Wörter in Dokument d sind $w_{d}$ und $w_{d,n}$ ist das nte Wort aus dem Dokument d. Alle $w_{d,n}$ sind Teil des fixierten Vokabulars.\cite[80]{Blei.2012}
+Die Abbildung 2.1 stellt das Modell dar. 
+
+\begin{figure}
+	\centering
+	\includegraphics[width=1\textwidth]{images/2-Hauptteil/LDA_Model}
+	\caption[Latent Dirichlet Allocation]{Eigene Adaption der Darstellung von \cite[81]{Blei.2012}. Bei der Abbildung handelt es sich um ein graphisch probabilistisches Modell des LDA }
+\end{figure}
+
+Das zentrale Problem bei dem LDA ist das Berechnen der posterioren Verteilung der versteckten Variablen. Diese Verteilung lässt sich nicht berechnen, jedoch gibt es verschiedene Algorithmen für die näherungsweise Inferenz. Zu diesen Algorithmen gehören die Variationsinferenz, wie sie von Blei \cite[1003]{Blei.2003} vorgeschlagen wird oder einer Form der Markov Chain Monte Carlo, dem Gibbs Sampling, dass von Griffiths und Steyvers \cite{Griffiths.2002,Griffiths.2004,Griffiths.2003} auf das LDA angwendet wird
+Hier könnte ich die einzelnen Inferenz noch näher eingehen. 
 
 Worum es bei dem Artikel geht.Wieso ich LDA verwende \cite[6]{Chang.2009}
+
  
 \section{Darstellungsverfahren}
 \label{sec:Darstellungsverfahren}
 
 \subsection{Graphische Darstellung der Topic Models}
 \label{sec:graphische_darstellung}
+
+Analysieren anhand von zwei Dimensionen. Die erste ist die Dimensionen des Topic Models darzustellen. Wörter in verbindung mit Themen und der Wahrscheinlichkeit. 
+
+Die zweite Dimension wäre die Darstellung der Verbindung im Corpus, mittels eines Netzwerks.
+
+Erstellung einer Heatmap mit den Dimensionen Wörter und Topic und dem Wahrscheinlichkeitswert als Farbe.
+
+Die Darstellung als Netzwerk macht nicht viel Sinn, da ein Netzwerk Verbindungen zwischen gleichen Dimensionen aufzeigt. Beispiel ein soziales Netzwerk zeigt die Verbindungen zwischen Personen. Bei einem Topic Model sind aber die Topics mit den Wörtern aus den es besteht gegeben. Man könnte also Topics nur über Wörter verbinden, die in beiden Topics vorhanden sind. Bei genauerer Betrachtung erkennt man aber, dass eine solche Darstellung nicht viel Sinn macht. Die Verbindung der Themen würde nichts über Ähnlichkeit oder Relation der Themen aussagen, da die Wörter in unterschiedlichen Kontexten unterschiedliche Bedeutungen haben können. Anders wäre es wenn die Verteilung der Themen über die Dokumente vorhanden ist. In diesem Fall könnten Dokumente, die ähnliche Themen besitzen über die Topics verbunden werden. 
 
 \subsection{Topic Browser}
 \label{sec:Topic Browser}
@@ -39,6 +58,17 @@ Worum es bei dem Artikel geht.Wieso ich LDA verwende \cite[6]{Chang.2009}
 
 \section{Topic Models mit dem LDA Verfahren}
 \label{sec:ergebnisse_des_LDA}
+Um die Topic Models visualisieren zu können muss zunächst ein Topic Model von einem Korpus erstellt werden. Die Schritte, die nötig sind um ein Topic Model zu erstellen sind die folgenden. Zunächst muss ein Korpus ausgewählt werden. Dieser Korpus muss in weiteren Schritten aufbereitet werden. Diese Schritte sind kritisch für die Qualität des daraus folgenden Topic Models. 
+Zu diesen Schritten gehören folgende: 
+\begin{itemize}
+	\item Erstellung des Korpus
+	\item Entfernung der Stopwörter 
+	\item Entfernung seltener Wörter
+	\item Erstellung des Vokabulars
+	
+\end{itemize}
+Da es sich dabei nicht um den Schwerpunkt der Arbeit handelt verwende Ich das Beispiel auf der Seite der gensim Bibliothek. Die Gensim Bibliothek umfasst vorgefertigte Skripte die die Erstellung von Topic Models zu der englischen Wikipedia ermöglichen. Die mitgelieferten Skripte übernehmen das gesamte Preprocessing der Daten. 
+
 
 \section{Visualisierung der Topic Models}
 \label{sec:visualisierung_topicmodels}
