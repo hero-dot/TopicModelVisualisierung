@@ -26,9 +26,11 @@ Die Abbildung 2.1 stellt das Modell dar.
 \end{figure}
 
 Das zentrale Problem bei dem LDA ist das Berechnen der posterioren Verteilung der versteckten Variablen. Diese Verteilung lässt sich nicht berechnen, jedoch gibt es verschiedene Algorithmen für die näherungsweise Inferenz. Zu diesen Algorithmen gehören die Variationsinferenz, wie sie von Blei \cite[1003]{Blei.2003} vorgeschlagen wird oder einer Form der Markov Chain Monte Carlo, dem Gibbs Sampling, dass von Griffiths und Steyvers \cite{Griffiths.2002,Griffiths.2004,Griffiths.2003} auf das LDA angwendet wird
-Hier könnte ich die einzelnen Inferenz noch näher eingehen. 
+Hier könnte ich die einzelnen Inferenz noch näher beschreiben. 
 
-Worum es bei dem Artikel geht.Wieso ich LDA verwende \cite[6]{Chang.2009}
+Essentiell für die Verwendung eines bestimmten Topic Models ist die Qualität der Ergebnisse. Für die Überprüfung der Qualität gibt es verschiedene Verfahren. Ein Verfahren umfasst die Analyse von Topics mit Hilfe von Kennzahlen, wie sie in Wallach et al. \cite{Wallach.2009} vorgestellt wird. %nachteil des Verfahrens
+Eine andere Herangehensweise an die Evaluation von Topic Models stellt Chang et al. vor. Das vorgestellte Verfahren misst die Qualität von Topic Models in zwei Dimensionen. Die erste Dimension ist die Qualität der Topics an sich. Gemessen wird dies, indem überprüft wird, ob alle Wörter die eine hohe Wahrscheinlichkeit in einem Topic erhalten haben auch dem daraus folgenden Thema zugehören. Die zweite Dimension überprüft, ob die gefundenen Themen eines Dokuments mit dem von einer Person empfundenen Sinn übereinstimmen. Verglichen wurden das probabilistic latent semantic indexing (pLSI), das latent Dirichlet allocation (LDA)und das correlated topic model (CTM)\cite{Blei.2006}. Das Ergebnis der qualitativen Studie war, dass das LDA model die genauesten Ergebnisse liefert. 
+\cite[6]{Chang.2009}
 
  
 \section{Darstellungsverfahren}
@@ -45,6 +47,7 @@ Die zweite Dimension wäre die Darstellung der Verbindung im Corpus, mittels eine
 
 Erstellung einer Heatmap mit den Dimensionen Wörter und Topic und dem Wahrscheinlichkeitswert als Farbe.
 
+Online gibt es eine Anwendung zur Darstellung von Topic Models als Netzwerk unter dem Namen Tethne. 
 Die Darstellung als Netzwerk macht nicht viel Sinn, da ein Netzwerk Verbindungen zwischen gleichen Dimensionen aufzeigt. Beispiel ein soziales Netzwerk zeigt die Verbindungen zwischen Personen. Bei einem Topic Model sind aber die Topics mit den Wörtern aus den es besteht gegeben. Man könnte also Topics nur über Wörter verbinden, die in beiden Topics vorhanden sind. Bei genauerer Betrachtung erkennt man aber, dass eine solche Darstellung nicht viel Sinn macht. Die Verbindung der Themen würde nichts über Ähnlichkeit oder Relation der Themen aussagen, da die Wörter in unterschiedlichen Kontexten unterschiedliche Bedeutungen haben können. Anders wäre es wenn die Verteilung der Themen über die Dokumente vorhanden ist. In diesem Fall könnten Dokumente, die ähnliche Themen besitzen über die Topics verbunden werden. 
 
 \subsection{Topic Browser}
