@@ -30,9 +30,13 @@ Hier könnte ich die einzelnen Inferenz noch näher beschreiben.
 
 Essentiell für die Verwendung eines bestimmten Topic Models ist die Qualität der Ergebnisse. Für die Überprüfung der Qualität gibt es verschiedene Verfahren. Ein Verfahren umfasst die Analyse von Topics mit Hilfe von Kennzahlen, wie sie in Wallach et al. \cite{Wallach.2009} vorgestellt wird. %nachteil des Verfahrens
 Eine andere Herangehensweise an die Evaluation von Topic Models stellt Chang et al. vor. Das vorgestellte Verfahren misst die Qualität von Topic Models in zwei Dimensionen. Die erste Dimension ist die Qualität der Topics an sich. Gemessen wird dies, indem überprüft wird, ob alle Wörter die eine hohe Wahrscheinlichkeit in einem Topic erhalten haben auch dem daraus folgenden Thema zugehören. Die zweite Dimension überprüft, ob die gefundenen Themen eines Dokuments mit dem von einer Person empfundenen Sinn übereinstimmen. Verglichen wurden das probabilistic latent semantic indexing (pLSI), das latent Dirichlet allocation (LDA)und das correlated topic model (CTM)\cite{Blei.2006}. Das Ergebnis der qualitativen Studie war, dass das LDA model die genauesten Ergebnisse liefert. 
-\cite[6]{Chang.2009}
+Des weiteren wurden Methoden entwickelt um diese Prozesse zu automatisieren.\cite{Lau.2014}
 
- 
+Welche Informationen stecken in einem Topic Model?
+beta und theta. beta die Verteilung der Wörter über ein Thema und theta die Verteilung der Themen über ein Dokument. 
+
+\newpage
+
 \section{Darstellungsverfahren}
 \label{sec:Darstellungsverfahren}
 
@@ -50,12 +54,19 @@ Erstellung einer Heatmap mit den Dimensionen Wörter und Topic und dem Wahrschein
 Online gibt es eine Anwendung zur Darstellung von Topic Models als Netzwerk unter dem Namen Tethne. 
 Die Darstellung als Netzwerk macht nicht viel Sinn, da ein Netzwerk Verbindungen zwischen gleichen Dimensionen aufzeigt. Beispiel ein soziales Netzwerk zeigt die Verbindungen zwischen Personen. Bei einem Topic Model sind aber die Topics mit den Wörtern aus den es besteht gegeben. Man könnte also Topics nur über Wörter verbinden, die in beiden Topics vorhanden sind. Bei genauerer Betrachtung erkennt man aber, dass eine solche Darstellung nicht viel Sinn macht. Die Verbindung der Themen würde nichts über Ähnlichkeit oder Relation der Themen aussagen, da die Wörter in unterschiedlichen Kontexten unterschiedliche Bedeutungen haben können. Anders wäre es wenn die Verteilung der Themen über die Dokumente vorhanden ist. In diesem Fall könnten Dokumente, die ähnliche Themen besitzen über die Topics verbunden werden. 
 
+\newpage
+
 \subsection{Topic Browser}
 \label{sec:Topic Browser}
+
+Darstellung und zugriff auf den Korpus durch die einzelnen Topics. Speziell die Verbindung von Topic, Dokument und den verwandten Topics. 
+
+\newpage
 
 \subsection{LDAvis}
 \label{sec:LDAvis}
 
+Fokus auf die Analyse der Topics und der Gesamtstruktur des Korpus. Kein direkter Bezug auf die Dokumente.
 
 
 \chapter{Anwendung}
