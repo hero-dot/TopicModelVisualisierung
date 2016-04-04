@@ -16,8 +16,10 @@ Aufgrund einiger Unzulänglichkeiten in dem Verfahren wurde von Blei das Verfahre
 \label{sec:Vorgehen}
 
 Bei der Latent Dirichlet Allocation handelt es sich um ein statistisches Modell eines Textkorpus. Die zugrundeliegende Idee ist, dass Dokumente als Kombination aus Themen dargestellt werden können, wobei jedes Thema als Verteilung über die im Text vorhandenen Wörter angesehen werden kann. Das LDA-Modell dient nicht nur der Verarbeitung von Texten, es kann auch in anderen Bereichen angewendet werden. Wörter sind die Basiseinheit der Daten als Teil eines Wörterbuchs und werden mit einem Einheitsvektor beschrieben. Ein Dokument ist eine Abfolge von Wörtern und ein Korpus ist eine Sammlung von Dokumenten. \cite[995 f.]{Blei.2003}
-Die Themen sind $\beta_{1:K}$ bei den jedes $\beta_{k}$ eine Verteilung über das Vokabular des Korpus ist. $\theta_{d}$ ist das Verhältnis der Themen für das dte Dokument, wobei $\theta_{d,k}$ der Anteil von Thema d an Dokument k ist. Die dem dten Dokument zugewiesenen Themen sind $z_{d}$, wobei $z_{d,n}$ das dem nten Wort zugewiesene Thema in Dokument d ist. Die beobachteten Wörter in Dokument d sind $w_{d}$ und $w_{d,n}$ ist das nte Wort aus dem Dokument d. Alle $w_{d,n}$ sind Teil des fixierten Vokabulars.\cite[80]{Blei.2012}
-Die Abbildung 2.1 stellt das Modell dar. 
+\\Die Themen sind $\beta_{1:K}$ bei den jedes $\beta_{k}$ eine Verteilung über das Vokabular des Korpus ist. $\theta_{d}$ ist das Verhältnis der Themen für das dte Dokument, wobei $\theta_{d,k}$ der Anteil von Thema d an Dokument k ist. Die dem dten Dokument zugewiesenen Themen sind $z_{d}$, wobei $z_{d,n}$ das dem nten Wort zugewiesene Thema in Dokument d ist. Die beobachteten Wörter in Dokument d sind $w_{d}$ und $w_{d,n}$ ist das nte Wort aus dem Dokument d. Alle $w_{d,n}$ sind Teil des fixierten Vokabulars \cite[80]{Blei.2012}. Abbildung 2.1 ist die graphische Darstellung des statistischen Prozesses. 
+\\Die Parameter $\beta_{1:K}$ und $\theta_{d}$ sind von besonderem Interesse.\cite[7]{Steyvers.2007} Diese beiden Parameter umfassen die versteckten Parameter, die das Verfahren herausgefunden hat. $\beta_{1:K}$ umfasst alle Topics mit den jeweiligen Wörtern und den gewichten der jeweiligen Wörter. $\theta_{d}$ gibt die Verteilung der Themen zu einem bestimmten Dokument d an.
+
+\emph{was ist eine Dirichlet Verteilung}
 
 \begin{figure}
 	\centering
@@ -25,34 +27,44 @@ Die Abbildung 2.1 stellt das Modell dar.
 	\caption[Latent Dirichlet Allocation]{Eigene Adaption der Darstellung von \cite[81]{Blei.2012}. Bei der Abbildung handelt es sich um ein graphisch probabilistisches Modell des LDA }
 \end{figure}
 
-Das zentrale Problem bei dem LDA ist das Berechnen der posterioren Verteilung der versteckten Variablen. Diese Verteilung lässt sich nicht berechnen, jedoch gibt es verschiedene Algorithmen für die näherungsweise Inferenz. Zu diesen Algorithmen gehören die Variationsinferenz, wie sie von Blei \cite[1003]{Blei.2003} vorgeschlagen wird oder einer Form der Markov Chain Monte Carlo, dem Gibbs Sampling, dass von Griffiths und Steyvers \cite{Griffiths.2002,Griffiths.2004,Griffiths.2003} auf das LDA angwendet wird
-Hier könnte ich die einzelnen Inferenz noch näher beschreiben. 
-
-Essentiell für die Verwendung eines bestimmten Topic Models ist die Qualität der Ergebnisse. Für die Überprüfung der Qualität gibt es verschiedene Verfahren. Ein Verfahren umfasst die Analyse von Topics mit Hilfe von Kennzahlen, wie sie in Wallach et al. \cite{Wallach.2009} vorgestellt wird. %nachteil des Verfahrens
+Das zentrale Problem bei dem LDA ist das Berechnen der Verteilungen von $\beta$ und $\theta$. Diese Verteilungen lassen sich nicht berechnen. Sie müssen über eine näherungsweise Inferenz bestimmt werden. Dazu stehen verschiedene Algorithmen zur Verfügung. Zu diesen Algorithmen gehören die Variationsinferenz, wie sie von Blei \cite[1003]{Blei.2003} vorgeschlagen wird oder einer Form der Markov Chain Monte Carlo, dem Gibbs Sampling, dass von Griffiths und Steyvers \cite{Griffiths.2002,Griffiths.2004,Griffiths.2003} auf das LDA angwendet wird
+Hier könnte ich die einzelnen Inferenz noch näher beschreiben.
+\\Essentiell für die Verwendung eines bestimmten Topic Models ist die Qualität der Ergebnisse. Für die Überprüfung der Qualität gibt es verschiedene Verfahren. Ein Verfahren umfasst die Analyse von Topics mit Hilfe von Kennzahlen, wie sie in Wallach et al. \cite{Wallach.2009} vorgestellt wird. %nachteil des Verfahrens
 Eine andere Herangehensweise an die Evaluation von Topic Models stellt Chang et al. vor. Das vorgestellte Verfahren misst die Qualität von Topic Models in zwei Dimensionen. Die erste Dimension ist die Qualität der Topics an sich. Gemessen wird dies, indem überprüft wird, ob alle Wörter die eine hohe Wahrscheinlichkeit in einem Topic erhalten haben auch dem daraus folgenden Thema zugehören. Die zweite Dimension überprüft, ob die gefundenen Themen eines Dokuments mit dem von einer Person empfundenen Sinn übereinstimmen. Verglichen wurden das probabilistic latent semantic indexing (pLSI), das latent Dirichlet allocation (LDA)und das correlated topic model (CTM)\cite{Blei.2006}. Das Ergebnis der qualitativen Studie war, dass das LDA model die genauesten Ergebnisse liefert. 
 Des weiteren wurden Methoden entwickelt um diese Prozesse zu automatisieren.\cite{Lau.2014}
 
-Welche Informationen stecken in einem Topic Model?
-beta und theta. beta die Verteilung der Wörter über ein Thema und theta die Verteilung der Themen über ein Dokument. 
-
-\newpage
 
 \section{Darstellungsverfahren}
 \label{sec:Darstellungsverfahren}
 
+Da Topic Models eine Zusammenfassung des Korpus darstellen, muss sich auch die visuelle Aufbereitung des Topic Models an dem Korpus orientieren. Der Korpus bestimmt gibt Aufschluss über die Ziele die mit der Erstellung des Topic Models verfolgt werden. Mögliche Verwendungen für ein Topic Model sind die Erschließung eines Korpus, die Darstellung der Themen eines Korpus oder eine Analyse der Struktur des Korpus. In den vergangenen Jahren wurde eine Reihe von Artikel veröffentlicht in den Ansätze erarbeitet wurden, wie Topic Models visuell dargestellt werden können. In den folgenden Abschnitten erfolgt eine Diskussion dieser Arbeiten.
+
 \subsection{Graphische Darstellung der Topic Models}
 \label{sec:graphische_darstellung}
 
-Eine reine graphische Darstellung der Topic Models macht nur wenig Sinn, da Topic Models in der Regel um die 100 Topics umfassen und eine solche Menge an Daten nicht mehr übersichtlich dargestellt werden kann.
+Zunächst sollen jedoch Möglichkeiten die Daten direkt, ohne eine weitere Aufbereitung mit Hilfe von Standarddiagrammen dargestellt werden. Mit Standarddiagrammen wird hier auf die gängigen Darstellungsformen für statistische Daten, wie sie in den Python Softwarebibliotheken matplotlib\footnote{http://matplotlib.org}, seaborn\footnote{https://web.stanford.edu/~mwaskom/software/seaborn/index.html} oder prettyplotlib\footnote{http://blog.olgabotvinnik.com/prettyplotlib/} zu finden sind. Wobei Seaborn und prettyplotlib auf matplotlib aufbauen. 
+\\Bei $\beta$ und $\Theta$ handelt es sich jeweils um Matrizen, in den die Werte für die Wahrscheinlichkeit der Wörter und den Anteil der Themen vorkommen. Die Grafik in Abbildung 2.2 gibt Aufschluss wie diese Matrizen bei dem LDA Topic Modell in Verbindung stehen.
 
-Analysieren anhand von zwei Dimensionen. Die erste ist die Dimensionen des Topic Models darzustellen. Wörter in verbindung mit Themen und der Wahrscheinlichkeit. 
+\begin{figure}
+	\centering
+	\includegraphics[width=1\textwidth]{images/2-Hauptteil/matrix_factorization}
+	\caption[Matrix Zerlegung bei einem LDA Topic Modell]{Matrix Zerlegung bei einem LDA Topic Modell}
+\end{figure}
 
-Die zweite Dimension wäre die Darstellung der Verbindung im Corpus, mittels eines Netzwerks.
+Da es sich bei beiden Dimensionen um Matrizen handelt, kommt für die Darstellung der Werte nur eine Form in Frage, die alle Werte dieser Matrix darstellen kann. Eine Darstellungsform, die diese Kriterien erfüllt ist die Heatmap. Bei einer Heatmap werden auf der x-Achse oder der y-Achse die Zeilen beziehungsweise die Spalten abgetragen.  Die Farbe des Feldes an einer beliebigen Stelle kodiert den Wert, des x/y Paares der Matrix. Ein Beispiel für eine solche Heatmap ist in Abbildung 2.3 aufgeführt. Das Beispiel wurde mit der seaborn Bibliothek und einem Musterskript, dass auf der Webseite\footnote{https://web.stanford.edu/~mwaskom/software/seaborn/examples/many\_pairwise\_correlations.html}  zur Verfügung gestellt wurde erstellt.
 
-Erstellung einer Heatmap mit den Dimensionen Wörter und Topic und dem Wahrscheinlichkeitswert als Farbe.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.75\textwidth]{images/2-Hauptteil/Heatmap_example}
+	\caption[Beispiel einer Heatmap]{Beispiel einer Heatmap}
+\end{figure}
+
+In dieser Abbildung sind die Achsen jeweils mit den Buchstaben von A bis Z beschriftet. Möchte man eine der Verteilung in einer solchen Heatmap darstellen, muss man zunächst festlegen auf welcher Achse die Zeile bzw. die Spalte abgetragen wird. Anschaulich wird das, wenn man es an dem Beispiel $\Theta$ darstellt. In der Matrix von $\Theta$ werden die Dokumente des Korpus in den Spalten und die Topics in den Zeilen dargestellt. In der Matrix ist der jeweilige Anteil des Topics am Dokument. \emph{ist der nicht in Summe 1?} Bei dieser Konstellation wird ein Problem mit dieser Darstellungsform ersichtlich. Für große Corpora, mit einer hohen Anzahl an Dokumenten wird diese Darstellungsform schnell unübersichtlich. Dies gilt ebenfalls für die Darstellung von $\beta$, da die Matrix das gesamte Vokabular aller Dokumente umfasst. Dadurch wird  die Darstellung schon für kleinere Textkörper unübersichtlich. 
 
 Online gibt es eine Anwendung zur Darstellung von Topic Models als Netzwerk unter dem Namen Tethne. 
-Die Darstellung als Netzwerk macht nicht viel Sinn, da ein Netzwerk Verbindungen zwischen gleichen Dimensionen aufzeigt. Beispiel ein soziales Netzwerk zeigt die Verbindungen zwischen Personen. Bei einem Topic Model sind aber die Topics mit den Wörtern aus den es besteht gegeben. Man könnte also Topics nur über Wörter verbinden, die in beiden Topics vorhanden sind. Bei genauerer Betrachtung erkennt man aber, dass eine solche Darstellung nicht viel Sinn macht. Die Verbindung der Themen würde nichts über Ähnlichkeit oder Relation der Themen aussagen, da die Wörter in unterschiedlichen Kontexten unterschiedliche Bedeutungen haben können. Anders wäre es wenn die Verteilung der Themen über die Dokumente vorhanden ist. In diesem Fall könnten Dokumente, die ähnliche Themen besitzen über die Topics verbunden werden. 
+Die Darstellung als Netzwerk macht nicht viel Sinn, da ein Netzwerk Verbindungen zwischen gleichen Dimensionen aufzeigt. Beispiel ein soziales Netzwerk zeigt die Verbindungen zwischen Personen. Bei einem Topic Model sind aber die Topics mit den Wörtern aus den es besteht gegeben. Man könnte also Topics nur über Wörter verbinden, die in beiden Topics vorhanden sind. Bei genauerer Betrachtung erkennt man aber, dass eine solche Darstellung nicht viel Sinn macht. Die Verbindung der Themen würde nichts über Ähnlichkeit oder Relation der Themen aussagen, da die Wörter in unterschiedlichen Kontexten unterschiedliche Bedeutungen haben können. Anders wäre es wenn die Verteilung der Themen über die Dokumente vorhanden ist. In diesem Fall könnten Dokumente, die ähnliche Themen besitzen über die Topics verbunden werden.
+
+Ein Resultat der Darstellung der Topic Models mit Standarddiagrammen ist die Notwendigkeit der Interaktivität aufgrund der Größe des analysierten Korpus.
 
 \newpage
 
@@ -67,7 +79,7 @@ Darstellung und zugriff auf den Korpus durch die einzelnen Topics. Speziell die 
 \label{sec:LDAvis}
 
 Fokus auf die Analyse der Topics und der Gesamtstruktur des Korpus. Kein direkter Bezug auf die Dokumente.
-
+\newpage
 
 \chapter{Anwendung}
 \label{sec:Anwendung}
@@ -86,19 +98,20 @@ Zu diesen Schritten gehören folgende:
 Da es sich dabei nicht um den Schwerpunkt der Arbeit handelt verwende Ich das Beispiel auf der Seite der gensim Bibliothek. Die Gensim Bibliothek umfasst vorgefertigte Skripte die die Erstellung von Topic Models zu der englischen Wikipedia ermöglichen. Die mitgelieferten Skripte übernehmen das gesamte Preprocessing der Daten. 
 
 Die Ergebnisse meines Topic Models
+\newpage
 
-
-\section{Visualisierung der Topic Models}
+\section{Visualisierung des Topic Models}
 \label{sec:visualisierung_topicmodels}
-
-\subsection{Topic Models als Heatmap}
-\label{sec:heatmap}
+\newpage
 
 \subsection{Topic Models als Netzwerk}
 \label{sec:networks}
+\newpage
 
-\section{Erstellung eines Topic Browsers}
+\subsection{Erstellung eines Topic Browsers}
 \label{sec:erstellung_TopicBrowser}
+\newpage
 
-\section{Visualisierung mit LDAvis}
+\subsection{Visualisierung mit LDAvis}
 \label{sec:anwendung_LDAvis}
+\newpage
