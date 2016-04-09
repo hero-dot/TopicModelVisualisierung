@@ -65,7 +65,7 @@ Dafür bietet sich ein Netzwerk an, dass die Verbindungen im Textkorpus darstellt
 \\Ein Netzwerk besteht aus Knoten und Kanten. Jeder Knoten stellt ein Objekt im Netzwerk dar. Die Kanten verbinden die Knoten und bilden das Netz zwischen den Knoten. Über eine Gewichtung können Kanten auch die Beziehung zwischen zwei Knoten näher beschreiben. So eine Gewichtung kann auf verschiedene Weisen in einem Netzwerk dargestellt werden. Durch eine dicke oder eine sehr kurze Kante zwischen zwei Knoten kann eine besonders enge Verbindung der Knoten angedeutet werden\cite[9 ff.]{Golbeck.2013}. \emph{Hier könnte evt. noch etwas zur Repräsentation von Netzwerken stehen}
 \\Möchte man mit Python ein Netzwerk aus einem Topic Modell erstellen, kann man verschiedene Bibliotheken verwenden. Die Bibliothek, um Netzwerkrepräsentationen mit Python zu erstellen nennt sich NetworkX\footnote{https://networkx.readthedocs.org/en/stable/index.html}. Es besteht diese direkt in seinem Code einzubinden oder sie als Teil der Tethne\footnote{https://diging.github.io/tethne/api/index.html} Bibiliothek zu verwenden. Beide Bibliotheken sind jedoch nicht in der Lage, Netzwerke direkt zu zeichnen. NetworkX verwendet die Bibliotheken PyGraphviz\footnote{https://pygraphviz.github.io/} und Matplotlib um Netzwerke zu erstellen. In Tethne erstellte Netzwerke können mit Cytoscape\footnote{http://www.cytoscape.org/} oder Gephi\footnote{https://gephi.org/} visualisiert werden. 
 
-Im folgenden erfolgt die Beschreibung des Ablaufs, wie aus einem Topic Model mit Hilfe von Tethne ein Netzwerk erstellt werden kann. 
+Im folgenden erfolgt die Beschreibung des Ablaufs, wie aus einem Topic Model mit Hilfe von Tethne ein Netzwerk erstellt werden kann.\\ Eine Beschreibung wie ein Netzwerk aus einem Topic Modell erstellt werden kann findet sich in einem Tutorial auf der Webseite von tethne. Abbildung 2.4 zeigt ein semanisches Netzwerk. Bei diesem Netzwerk wurden die Dokumente eines Korpus anhand ihrer Topics verbunden. die Stärke der Linie zwischen den Knoten gibt an 
 
 \begin{figure}
 	\centering
@@ -73,12 +73,11 @@ Im folgenden erfolgt die Beschreibung des Ablaufs, wie aus einem Topic Model mit
 	\caption[Beispiel eines Netzwerks]{Beispiel eines Netzwerks}
 \end{figure}
 
-Kritikpunkt ist die Polysemie Mehrdeutigkeit Vorhandensein mehrerer Bedeutungen bei einem Wort\cite[3]{Steyvers.2007} \\Die Darstellung als Netzwerk macht nicht viel Sinn, da ein Netzwerk Verbindungen zwischen gleichen Dimensionen aufzeigt. Beispiel ein soziales Netzwerk zeigt die Verbindungen zwischen Personen. Bei einem Topic Model sind aber die Topics mit den Wörtern aus den es besteht gegeben. Man könnte also Topics nur über Wörter verbinden, die in beiden Topics vorhanden sind. Bei genauerer Betrachtung erkennt man aber, dass eine solche Darstellung nicht viel Sinn macht. Die Verbindung der Themen würde nichts über Ähnlichkeit oder Relation der Themen aussagen, da die Wörter in unterschiedlichen Kontexten unterschiedliche Bedeutungen haben können.
-Anders wäre es wenn die Verteilung der Themen über die Dokumente vorhanden ist. In diesem Fall könnten Dokumente, die ähnliche Themen besitzen über die Topics verbunden werden.
+Kritikpunkt ist die Polysemie Mehrdeutigkeit Vorhandensein mehrerer Bedeutungen bei einem Wort\cite[3]{Steyvers.2007} 
 
 Ein Resultat der Darstellung der Topic Models mit Standarddiagrammen ist die Notwendigkeit der Interaktivität aufgrund der Größe des analysierten Korpus.
-
-\newpage
+Einfache Darstellungsformen führen zu einer nicht unbedingt erhöhten Informationsgewinn durch die Topic Models. 
+Eine solche Darstellung ist aber nicht einfach umzusetzen, aufgrund der hohen Abstraktion der Ergebnisse. Diese Ergebnisse lassen sich nur vollständig und kompakt darstellen, wenn eine interaktive Darstellungsform gewählt wird.\cite[1]{Sievert.2014}
 
 \subsection{Topic Browser}
 \label{sec:Topic Browser}
