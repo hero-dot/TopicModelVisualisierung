@@ -73,24 +73,165 @@ Im folgenden erfolgt die Beschreibung des Ablaufs, wie aus einem Topic Model mit
 	\caption[Beispiel eines Netzwerks]{Beispiel eines Netzwerks}
 \end{figure}
 
-Kritikpunkt ist die Polysemie Mehrdeutigkeit Vorhandensein mehrerer Bedeutungen bei einem Wort\cite[3]{Steyvers.2007} 
-
-Ein Resultat der Darstellung der Topic Models mit Standarddiagrammen ist die Notwendigkeit der Interaktivität aufgrund der Größe des analysierten Korpus.
-Einfache Darstellungsformen führen zu einer nicht unbedingt erhöhten Informationsgewinn durch die Topic Models. 
+%Kritikpunkt ist die Polysemie Mehrdeutigkeit Vorhandensein mehrerer Bedeutungen bei einem Wort\cite[3]{Steyvers.2007} 
+%Ein Resultat der Darstellung der Topic Models mit Standarddiagrammen ist die Notwendigkeit der Interaktivität aufgrund der Größe des analysierten Korpus.
+%Einfache Darstellungsformen führen zu einer nicht unbedingt erhöhten Informationsgewinn durch die Topic Models. 
 Eine solche Darstellung ist aber nicht einfach umzusetzen, aufgrund der hohen Abstraktion der Ergebnisse. Diese Ergebnisse lassen sich nur vollständig und kompakt darstellen, wenn eine interaktive Darstellungsform gewählt wird.\cite[1]{Sievert.2014}
+
+Es wurden bereits eine Reihe von Verfahren entwickelt die sich grob in zwei Gruppen einteilen lassen. Diese Gruppen unterscheiden sich in der Zielsetzung die mit der Erstellung des Topic Models verfolgt wird.
+Eine Anzahl von Systemen zur Visualisierung von Topic Models wurden in den letzten Jahren entwickelt. Einige von ihnen sind auf das Ermöglichen des Anwenders fokussiert, Dokumente, Topics und Wörter durchzusehen um etwas über die Beziehung zwischen diesen drei Basiseinheiten herauszufinden \cite[65]{Sievert.2014}
+Die erste Gruppe verwendet Topic Models um eine Sammlung von Texten zu  visualisieren und die zweite ermöglicht die Suche nach Dokumenten zu bestimmten Themen. Bei der ersten Gruppe werden die Topics, ähnlich wie in einem Netzwerk in einem zweidimensionalen Raum dargestellt.Die zweite Gruppe verwendet die Topic Models um eine Sammlung von Dokumenten in ihre Themen aufzuteilen und diese Dokumente mit anderen Themen bzw. Dokumenten zu verknüpfen. Bei den letzteren Verfahren spricht man allgemein auch von Topic Browsern, da sie das Browsen durch eine Sammlung von Dokumenten ermöglichen. 
+
+\paragraph{Online verfügbare Verfahren}
+\label{sec:online_verf_verfahren}
+Dieser Abschnitt enthält eine Liste an Internetreferenzen zu Projekten die sich mit der Darstellung von Topic Models befasst haben
+\begin{itemize}
+	\item The networked corpus
+		\\http://www.networkedcorpus.com/
+		\\https://github.com/jeffbinder/networkedcorpus
+		\\http://ach.org/2013/12/30/cultures-of-visualization-adam-smiths-index-and-topic-modeling/
+
+	\item jsLDA
+		\\http://mimno.infosci.cornell.edu/jsLDA/
+		\\http://mimno.infosci.cornell.edu/
+
+	\item Structural Topic Models
+		\\http://structuraltopicmodel.com/
+		\\https://github.com/mroberts/stmBrowser
+
+	\item journal topic-model browser Jonathan Goodwin
+		\\http://jgoodwin.net/theory-browser/
+		\\http://jgoodwin.net/categories/quantitative-methods/
+
+	\item dfr-browser
+		\\https://agoldst.github.io/dfr-browser/
+
+	\item TOME
+		\\http://dhlab.lmc.gatech.edu/tome/
+
+	\item http://christo.cs.umass.edu/wiki40/
+
+	\item http://christo.cs.umass.edu/classics-wiki/
+
+\end{itemize}
+
+Exemplarisch für die zwei Gruppen von Verfahren sollen im in den folgenden zwei Teilen. Zwei Projekte vorgestellt werden, die eine robuste Realisierung der jeweiligen Anwendung darstellen. 
+
+
+\subsection{LDAvis}
+\label{sec:LDAvis}
+
+Das LDAvis Verfahren ist die Weiterentwicklung von Systemen, die bereits zur Visualisierung von Topic Models erstellt wurden. Das System soll grundlegende Fragen wie (1) Was ist die Bedeutung eines Topics?, (2) Wie weit verbreitet ist ein Topic?, und (3) Was ist die Verbindung zwischen den Topics? 
+\\Abbildung 2.5 zeigt eine beispielhafte Visualisierung eines Topic Models mit dem LDAvis System. Die linke Seite der Abbildung stellt den globalen Zusammenhang im Topic Model dar. Sie beanwortet die Fragen 2 und 3. In dieser Ansicht werden die Topics als Kreise in einem zweidimensionalen Raum dargestellt. Der Abstand wird wie in dem Artikel von Chuang\cite{Chuang.2012b} berechnet. Der gesamt Anteil eines Topics am Korpus wird über die Fläche des Kreises dargestellt. 
+\\Auf der rechten Seite werden die Wörter, die am nützlichsten für die Interpretation des ausgewählten Topics sind angezeigt. Die rechte Seite gibt somit Aufschluss über die Bedeutung der einzelnen Topics. Die übereinanderliegenden Balken codieren die Häufigkeit des Worts im Korpus beziehungsweise im jeweiligen Topic. Die Berechnung der Topic spezifischen Häufigkeit erfolgt, wie im wie im Termite Browser von Chuang\cite{Chuang.2012}. 
+Die rechte und die linke Seite sind verbunden und interaktiv. Wählt man ein Topic auf der linken Seite aus, erhält man die zugehörigen Wörter auf der rechten Seite. Umgekehrt erhält man bei der Auswahl eines Wortes auf der rechten Seite dessen Verteilung über die Themen auf der linken Seite.
+\\Das LDAvis System implementiert eine neue Methode um die nützlichsten Wörter für die Interpretation zu finden und zu sortieren. Die Autoren stellen eine Kennzahl für die Wörter vor, die Sie die Relevanz des Wortes nennen.\cite[63]{Sievert.2014} 
+
+\begin{figure}
+	\centering
+	\includegraphics[width=1\textwidth]{images/2-Hauptteil/LDAvis_example}
+	\caption[Beispiel für das LDAvis]{Abbildung des LDAvis: 	Die Grafik ist dem Beispiel auf der Webseite				\footnote{https://cpsievert.github.io/LDAvis/reviews/		vis/} des LDAvis entnommen. Mit \#topic=k\&lambda=l			\&term=s lässt sich ein Wert für das Topic, lambda und 		den Term festlegen}
+\end{figure}
+
+Relevanz der Wörter für die Topics und die Studie
+Wie bereits beschrieben, steht $\Phi_{kw}$ im LDA Topic Model für die Wahrscheinlichkeit des Terms $w \in \lbrace1,\ldots,V\rbrace$ für das Topic $k \in \lbrace1,\ldots,K\rbrace$ und $p_w$ steht für die Wahrscheinlichkeit des Terms $w$ im Korpus. Die Relevanz $r$ eines Terms $w$ für ein Topic $k$ wird definiert als:
+
+\begin{equation}	
+	r\left(w,k|\lambda\right) = \lambda log\left(\Phi_{kw}		\right) + (1-\lambda)log\left(\frac{\Phi_{kw}}{p_{w}}		\right),
+\end{equation}
+
+Die Gleichung setzt sich aus den gewichteten und  logarithmierten Größen für die Wahrscheinlichkeit $\Phi_{kw}$ und dem Lift zusammen. Die Gewichtung erfolgt durch den Parameter $\lambda \left(wobei 0\le \lambda \le 1\right)$. Wird für $\lambda$ der Wert 1 verwendet, erhält man das gewohnte Ranking der Wörter nur nach den Wahrscheinlichkeiten, des LDA. Ist $\lambda = 0$ dann erfolgt das Ranking ausschließlich auf der Grundlage des Lifts\cite[66]{Sievert.2014}.
+\\Der Lift ist das Verhältnis der Wahrscheinlichkeit eines Terms $w$ für ein Topic $k$ und der Wahrscheinlichkeit eines Wortes im Korpus $p_w$. Diese Kennzahl stammt ursprünglich von Taddy \cite{Taddy.2011}. 
+\\Um herauszufinden, ob es ein optimalen Wert für $\lambda$ gibt führten die Autoren eine Studie mit Anwendern durch. Die Aufgabe der Teilnehmer war, eine Liste mit fünf nach ihrer Relevanz geordneten Wörter zu lesen und der Liste eines von drei vorgeschlagenen Topics zuzuordnen. Die Werte für $\lambda$ wurden zufällig ausgewählt. Die Ergebnisse waren, dass der optimale Wert für $\lambda$ bei ungefähr 0.6 und die Wahrscheinlichkeit einer richtigen zu Ordnung des Topics von circa 70\%. Werte für $\lambda$ nahe 0 und 1 führten nur zu Wahrscheinlichkeiten von 53\% und 63\%. 
+
+The LDAvis system
+
+Voraussetzungen der Anwendung
+%details Pdf zum LDAvis
+
+\footnote{https://cran.r-project.org/web/packages/LDAvis/LDAvis.pdf}
+
+Pythonimplementierung von LDAvis
+
+\footnote{https://pypi.python.org/pypi/pyLDAvis/1.0.0}
 
 \subsection{Topic Browser}
 \label{sec:Topic Browser}
 
 Darstellung und zugriff auf den Korpus durch die einzelnen Topics. Speziell die Verbindung von Topic, Dokument und den verwandten Topics. 
 
-\newpage
+Auch wenn diese Werkzeuge hilfreich sind, wenn man eine Sammlung von Texten durcharbeiten möchte, suchen wir eine kompaktere Visualisierung, mit einem Fokus auf dem schnellen und einfachen verstehen von einzelnen Topics ohne zwangsläufig die Dokumente darzustellen\cite[65]{Sievert.2014}
 
-\subsection{LDAvis}
-\label{sec:LDAvis}
+Zusammenfassung des Artikels
+\begin{enumerate}
+	\item Einleitung
+		\begin{itemize}
+			\item Das Verstehen und Navigieren durch große 				Dokumente ist eine wichtige Aktivität in vielen 			Bereichen
+			\item Umfangreiche Dokumente lassen sich nur 				schwer von Hand organisieren, weshalb eine 					Automatisierung des Prozesses nötig ist.
+			\item Topic Model Algorithmen finden unbekannte 			Themenstrukturen in Dokumenten. Das Ergebnis 				der Topic Models ist allerdings nur unter hohem 			Aufwand analysierbar, da die Ergebnisse in Form 			von Zahlen vorliegen
+			\item Wir schlagen ein angepasstes Topic Model 				vor, um einen Corpus zu organisieren, 						visualisieren, zusammmenzufassen und mit ihm zu 			interagieren.
+			\item Die entdeckte Struktur legt Beziehungen 				offen, die zu Interaktionen in der 							Visualisierung führen
+			\item Die Ziele sind daher: Den Corpus 						zusammmenzufassen, Beziehungen zwischen Inhalt 				und Zusammenfassungen aufzudecken und 						Beziehungen im Inhalt aufzudecken
+		\end{itemize}				
 
-Fokus auf die Analyse der Topics und der Gesamtstruktur des Korpus. Kein direkter Bezug auf die Dokumente.
-\newpage
+	\item In Verbindung stehende Literatur
+		\begin{itemize}
+			
+			\item Um den Corpus als ganzes zu verstehen 				bieten sich folgende Ansätze an: Exemplar-based 			Visualization, der ThemeRiver und der 						FacetAtlas
+			\item Die von uns entwickelte Visualisierung 				bietet eine kompakte Zusammenfassung des Corpus 			und Verbindungen zwischen der Zusammenfassung 				und den individuellen Dokumenten
+			\item Vorausgehende Forschung zu Topic Models 				fokussierte sich auf die Verbesserung der 					Algorithmen und bedienten sich zur Darstellung 				an Browsern.
+			\item Diese Browser heben Topics hervor und 				beachten die Dokumente nur wenig.
+		\end{itemize}		
+	\item Probabilistic Topic Models
+		\begin{itemize}
+			\item Der Ansatz beschränkt sich auf dne latent 			Dirichlet allocation (LDA) Algorithmus, einem 				der einfachsten probabilistischen topic model. 
+			\item Der LDA Algorithmus zerlegt eine Menge an 			Dokumenten in Topics und stellt jedes Dokument 				mit einem gewichteten subset der Topics dar. 
+			\item Grober Algorithmus des LDA
+		\end{itemize} 
+
+\item Visualisierung eines Topic Models
+		\begin{itemize}
+
+			\item Die Visualisierung verwendet sowohl die 				originalen Daten des Corpus als auch die 					abgeleiteten Variablen der Topic Model.
+			\item Bei den Topic Model Variablen handelt es 				sich um die Topics beta k, die jeweils eine 				Verteilung über das Vokabular darstellen und 				das Verhältnis der Topics, eine für jedes 					Dokument, welche eine Verteilung über die 					Topics ist.
+		\end{itemize} 
+\item Visualisieren der Elemente des Topic Models
+	\begin{itemize}
+
+		\item Der Navigator besitzt zwei Hauptseiten: eine 			für die Darstellung der entdeckten Topics und eine 			andere für die Dokumente. Des weiteren gibt es eine 		Übersichtsseite, die die Struktur des Corpus 				darstellt.
+	\end{itemize}
+\begin{enumerate}
+
+\item Topic Pages
+\begin{itemize}
+\item Topics fassen den Corpus zusammen. Im Output eines Inferenz Algorithmus sind Sie die Wahrscheinlichkeitsverteilung über das Vokabular. 
+\item In dieser Darstellung werden die Wörter in einer Liste auf der linken Seite dargestellt, wobei das wahrscheinlichste Wort an erster Stelle steht. Geordnet nach ihrer topic term probability
+\item In der mittleren Spalte ist eine Liste an Dokumenten, die dieses Topic umfassen, geordnet nach dem Verhältnis der Topics. Die Titel enthalten eine Verlinkung zu den entsprechenden Dokumenten
+\item Verwandte Topics werden in der rechten Spalte aufgeführt. Geordnet nach ihrer pairwise topic dissimilarity score. Siehe Ausdruck. Diese Kennzahl findet Topics mit einer ähnlichen Verteilung.
+\end{itemize}	
+	
+\item Document Pages
+\begin{itemize}
+\item Die Dokumenten Seiten stellen den originalen Corpus dar. Dort werden die Dokumente und die topics, die das Dokument darstellt, geordnet nach dem Verhältnis der topics. 
+\item Die Dokumente werden auch mit ähnlichen Dokumenten verbunden. Dazu wird eine Kennzahl ähnlich der pairwise dissimilarity score berechnet. Allerdings wird das Verhältnis der Topics als Grundlage für die Berechnung verwendet. Diese Kennzahl gibt Auskunft, wie ähnlich sich zwei Dokumente sind. 
+\end{itemize}		
+		 
+\item Overview Pages
+\begin{itemize}
+\item Die Overview Pages sind der Einstiegspunkt zur Erkundung des Corpus. Auf der Seite werden die Topics anhand ihrer Häufigkeit im Corpus dargestellt. Die Häufigkeit eines Topics ist die Summe aller Verhältnisse in allen Dokumenten. 
+\end{itemize}		
+\end{enumerate}
+
+\item Implementierung 
+\begin{itemize}
+\item Um die Methode für die Visualisierung zu nutzen sind drei Schritte nötig.
+\begin{enumerate}
+\item Den LDA Algorithmus auf einen Corpus anwenden um die Wahrscheinlichkeiten der versteckten Variablen zu erhalten. 
+\item Eine Datenbank erstellen
+\item Webseiten erstellen um durch den Corpus zu navigieren. 
+\end{enumerate}	
+\end{itemize}
+\end{enumerate}
 
 \chapter{Anwendung}
 \label{sec:Anwendung}
@@ -107,6 +248,8 @@ Zu diesen Schritten gehören folgende:
 	
 \end{itemize}
 Da es sich dabei nicht um den Schwerpunkt der Arbeit handelt verwende Ich das Beispiel auf der Seite der gensim Bibliothek. Die Gensim Bibliothek umfasst vorgefertigte Skripte die die Erstellung von Topic Models zu der englischen Wikipedia ermöglichen. Die mitgelieferten Skripte übernehmen das gesamte Preprocessing der Daten. 
+
+Eine vergleichbares Projekt von Mimno hat den Wikipedia Korpus in 500 Topics aufgeteilt. 
 
 Die Ergebnisse meines Topic Models
 \newpage
