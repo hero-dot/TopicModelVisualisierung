@@ -73,7 +73,6 @@ Im folgenden erfolgt die Beschreibung des Ablaufs, wie aus einem Topic Model mit
 	\caption[Beispiel eines Netzwerks]{Beispiel eines Netzwerks}
 \end{figure}
 
-%Kritikpunkt ist die Polysemie Mehrdeutigkeit Vorhandensein mehrerer Bedeutungen bei einem Wort\cite[3]{Steyvers.2007} 
 %Ein Resultat der Darstellung der Topic Models mit Standarddiagrammen ist die Notwendigkeit der Interaktivität aufgrund der Größe des analysierten Korpus.
 %Einfache Darstellungsformen führen zu einer nicht unbedingt erhöhten Informationsgewinn durch die Topic Models. 
 Eine solche Darstellung ist aber nicht einfach umzusetzen, aufgrund der hohen Abstraktion der Ergebnisse. Diese Ergebnisse lassen sich nur vollständig und kompakt darstellen, wenn eine interaktive Darstellungsform gewählt wird.\cite[1]{Sievert.2014}
@@ -123,7 +122,7 @@ Exemplarisch für die zwei Gruppen von Verfahren sollen im in den folgenden zwei 
 
 Das LDAvis Verfahren ist die Weiterentwicklung von Systemen, die bereits zur Visualisierung von Topic Models erstellt wurden. Das System soll grundlegende Fragen wie (1) Was ist die Bedeutung eines Topics?, (2) Wie weit verbreitet ist ein Topic?, und (3) Was ist die Verbindung zwischen den Topics? 
 \\Abbildung 2.5 zeigt eine beispielhafte Visualisierung eines Topic Models mit dem LDAvis System. Die linke Seite der Abbildung stellt den globalen Zusammenhang im Topic Model dar. Sie beanwortet die Fragen 2 und 3. In dieser Ansicht werden die Topics als Kreise in einem zweidimensionalen Raum dargestellt. Der Abstand wird wie in dem Artikel von Chuang\cite{Chuang.2012b} berechnet. Der gesamt Anteil eines Topics am Korpus wird über die Fläche des Kreises dargestellt. 
-\\Auf der rechten Seite werden die Wörter, die am nützlichsten für die Interpretation des ausgewählten Topics sind angezeigt. Die rechte Seite gibt somit Aufschluss über die Bedeutung der einzelnen Topics. Die übereinanderliegenden Balken codieren die Häufigkeit des Worts im Korpus beziehungsweise im jeweiligen Topic. Die Berechnung der Topic spezifischen Häufigkeit erfolgt, wie im wie im Termite Browser von Chuang\cite{Chuang.2012}. 
+\\Auf der rechten Seite werden die Wörter, die am nützlichsten für die Interpretation des ausgewählten Topics sind angezeigt. Die rechte Seite gibt somit Aufschluss über die Bedeutung der einzelnen Topics. Die übereinanderliegenden Balken codieren die Häufigkeit des Worts im Korpus beziehungsweise im jeweiligen Topic. Die Berechnung der Topic spezifischen Häufigkeit erfolgt, wie im wie im Termite Browser von Chuang\cite{Chuang.2012}.Der blaue Balken repräsentiert die Häufigkeit des Wortes im gesamten Korpus und der rote Balken gibt die Topic spezifische Häufigkeit eines Wortes wieder. 
 Die rechte und die linke Seite sind verbunden und interaktiv. Wählt man ein Topic auf der linken Seite aus, erhält man die zugehörigen Wörter auf der rechten Seite. Umgekehrt erhält man bei der Auswahl eines Wortes auf der rechten Seite dessen Verteilung über die Themen auf der linken Seite.
 \\Das LDAvis System implementiert eine neue Methode um die nützlichsten Wörter für die Interpretation zu finden und zu sortieren. Die Autoren stellen eine Kennzahl für die Wörter vor, die Sie die Relevanz des Wortes nennen.\cite[63]{Sievert.2014} 
 
@@ -144,14 +143,42 @@ Die Gleichung setzt sich aus den gewichteten und  logarithmierten Größen für die
 \\Der Lift ist das Verhältnis der Wahrscheinlichkeit eines Terms $w$ für ein Topic $k$ und der Wahrscheinlichkeit eines Wortes im Korpus $p_w$. Diese Kennzahl stammt ursprünglich von Taddy \cite{Taddy.2011}. 
 \\Um herauszufinden, ob es ein optimalen Wert für $\lambda$ gibt führten die Autoren eine Studie mit Anwendern durch. Die Aufgabe der Teilnehmer war, eine Liste mit fünf nach ihrer Relevanz geordneten Wörter zu lesen und der Liste eines von drei vorgeschlagenen Topics zuzuordnen. Die Werte für $\lambda$ wurden zufällig ausgewählt. Die Ergebnisse waren, dass der optimale Wert für $\lambda$ bei ungefähr 0.6 und die Wahrscheinlichkeit einer richtigen zu Ordnung des Topics von circa 70\%. Werte für $\lambda$ nahe 0 und 1 führten nur zu Wahrscheinlichkeiten von 53\% und 63\%. 
 
-The LDAvis system
+Das LDAvis System kann dementsprechend in zwei Kernfunktionen unterteilt werden. Zunächst ermöglicht LDAvis eine Darstellung eines Topics mit den zugehörigen Wörtern. Wie beschrieben, werden die allgemeine Häufigkeit mit einem blauen Balken und die topic-spezifische Häufigkeit mit einem roten Balken dargestellt. Über einen Schieberegler lässt sich der Wert für $\lambda$ einstellen, der auf 0.6 voreingestellt ist. Ein Vergleich der Breite des roten mit dem blauen Balken eines Terms gibt Aufschluss, ob ein Begriff aufgrund seines Lifts oder seiner absoluten Häufigkeit relevant ist. Die zweite Kernfunktion ist die Fähigkeit, die bedingte Verteilung eines Wortes über die verschiedenen Themen darzustellen. Damit lässt sich überprüfen ob die Darstellung ähnliche Topics im gleichen Bereich in der Darstellung abgebildet hat. Dabei wird die Abbildung so angepasst, dass die Fläche der Kreise der Wort spezifischen Häufigkeit im Korpus entspricht. Als Ergebnis sollten die Topics zu einem ausgewählten Wort in unmittelbarer Nähe in der Abbildung sein\cite[68]{Sievert.2014}. Es sei denn ein Wort besitzt mehrere Bedeutungen im Sinne der Polysemie \cite[3]{Steyvers.2007}, dann ist es auch möglich, dass ein zugehöriges Topic in einem anderen Bereich der Abbildung zu finden ist. 
 
-Voraussetzungen der Anwendung
-%details Pdf zum LDAvis
+Die Visualisierung mit dem LDAvis benötigt 5 Input Argumente. 
 
-\footnote{https://cran.r-project.org/web/packages/LDAvis/LDAvis.pdf}
+\begin{enumerate}
+	\item[$\phi$] Enthält die $K\times W$ Matrix mit den Wahrscheinlichkeiten der $W$ Wörter des Vokabulars für alle $K$ topics. Jede Reihe in $K$ muss in der Summe eins ergeben. Zudem muss $\phi_{kw} > 0$ für jedes $k \in 1 \ldots K$ und $w \in 1 \ldots W$ gelten. 
+	\item[$\theta$] Enthält die $D \times K$ Matrix mit den Wahrscheinlichkeiten der $K$ Topics für jedes der $D$ Dokumente im Korpus. Jede Reihe in $D$ muss in der Summe eins ergeben.
+	\item[$n_d$] Ist die Anzahl an Token die in einem Dokument $D$ beobachtet wurden. Der Wert für $n_d$ muss größer als Null sein. 
+	\item[vocab] Vektor der Länge $W$ mit den Wörter des Vokabulars. Die Wörter müssen in der gleichen Reihenfolge, wie in $\phi$ geordnet sein.
+	\item[$M_w$] Die Häufigkeit des Wortes $w$ im gesamten Korpus, wobei $M_w$ größer als null für jedes Wort in $w = 1 \ldots W$ sein muss. 
+\end{enumerate}
 
-Pythonimplementierung von LDAvis
+\footnote{https://cran.r-project.org/web/packages/LDAvis/vignettes/details.pdf}
+
+Verwendung von LDAvis wie vorgesehen mit R
+
+\begin{enumerate}
+	\item Erstellen eines Korpus
+	\item Erstellen eines Topic Models 
+	\item Erstellen der Json datei mit createJSON
+	\item Darstellen der JSON Datei entweder
+	\begin{itemize}
+		\item mit dem Befehl serVis(json)
+		\item oder mit einem separaten Server. Der Befehl dafür würde lauten : 'cd jsondirectory \&\& python -m simpleHTTPServer' und öffnen der Seite http://localhost:8000 im Browser
+	\end{itemize}
+\end{enumerate}
+
+Alternativ dazu lässt sich das ganze in Python realisieren.
+\begin{enumerate}
+	\item Topic Model mit Gensim
+	\item Darstellen mit pyLDAvis
+	\begin{itemize}
+		\item entweder mit einer JSON Datei aus R
+		\item oder mit einem Gensim model
+	\end{itemize}
+\end{enumerate}
 
 \footnote{https://pypi.python.org/pypi/pyLDAvis/1.0.0}
 
@@ -245,8 +272,10 @@ Zu diesen Schritten gehören folgende:
 	\item Entfernung der Stopwörter 
 	\item Entfernung seltener Wörter
 	\item Erstellung des Vokabulars
-	
 \end{itemize}
+
+\inputminted{Python}{code/2-Hauptteil/LDA.py}
+
 Da es sich dabei nicht um den Schwerpunkt der Arbeit handelt verwende Ich das Beispiel auf der Seite der gensim Bibliothek. Die Gensim Bibliothek umfasst vorgefertigte Skripte die die Erstellung von Topic Models zu der englischen Wikipedia ermöglichen. Die mitgelieferten Skripte übernehmen das gesamte Preprocessing der Daten. 
 
 Eine vergleichbares Projekt von Mimno hat den Wikipedia Korpus in 500 Topics aufgeteilt. 
