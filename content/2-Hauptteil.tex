@@ -16,18 +16,18 @@ Aufgrund einiger Unzulänglichkeiten in dem Verfahren wurde von Blei das Verfahre
 \label{sec:Vorgehen}
 
 Bei der Latent Dirichlet Allocation handelt es sich um ein statistisches Modell eines Textkorpus. Die zugrundeliegende Idee ist, dass Dokumente als Kombination aus Themen dargestellt werden können, wobei jedes Thema als Verteilung über die im Text vorhandenen Wörter angesehen werden kann. Das LDA-Modell dient nicht nur der Verarbeitung von Texten, es kann auch in anderen Bereichen angewendet werden. Wörter sind die Basiseinheit der Daten als Teil eines Wörterbuchs und werden mit einem Einheitsvektor beschrieben. Ein Dokument ist eine Abfolge von Wörtern und ein Korpus ist eine Sammlung von Dokumenten. \cite[995 f.]{Blei.2003}
-\\Die Themen sind $\beta_{1:K}$ bei den jedes $\beta_{k}$ eine Verteilung über das Vokabular des Korpus ist. $\theta_{d}$ ist das Verhältnis der Themen für das dte Dokument, wobei $\theta_{d,k}$ der Anteil von Thema d an Dokument k ist. Die dem dten Dokument zugewiesenen Themen sind $z_{d}$, wobei $z_{d,n}$ das dem nten Wort zugewiesene Thema in Dokument d ist. Die beobachteten Wörter in Dokument d sind $w_{d}$ und $w_{d,n}$ ist das nte Wort aus dem Dokument d. Alle $w_{d,n}$ sind Teil des fixierten Vokabulars \cite[80]{Blei.2012}. Abbildung 2.1 ist die graphische Darstellung des statistischen Prozesses. 
-\\Die Parameter $\beta_{1:K}$ und $\theta_{d}$ sind von besonderem Interesse.\cite[7]{Steyvers.2007} Diese beiden Parameter umfassen die versteckten Parameter, die das Verfahren herausgefunden hat. $\beta_{1:K}$ umfasst alle Topics mit den jeweiligen Wörtern und den gewichten der jeweiligen Wörter. $\theta_{d}$ gibt die Verteilung der Themen zu einem bestimmten Dokument d an.
+\\Die Themen sind $\phi_{1:K}$ bei den jedes $\phi_{k}$ eine Verteilung über das Vokabular des Korpus ist. $\theta_{d}$ ist das Verhältnis der Themen für das dte Dokument, wobei $\theta_{d,k}$ der Anteil von Thema d an Dokument k ist. Die dem dten Dokument zugewiesenen Themen sind $z_{d}$, wobei $z_{d,n}$ das dem nten Wort zugewiesene Thema in Dokument d ist. Die beobachteten Wörter in Dokument d sind $w_{d}$ und $w_{d,n}$ ist das nte Wort aus dem Dokument d. Alle $w_{d,n}$ sind Teil des fixierten Vokabulars \cite[80]{Blei.2012}. Abbildung 2.1 ist die graphische Darstellung des statistischen Prozesses. 
+\\Die Parameter $\phi_{1:K}$ und $\theta_{d}$ sind von besonderem Interesse.\cite[7]{Steyvers.2007} Diese beiden Parameter umfassen die versteckten Parameter, die das Verfahren herausgefunden hat. $\phi_{1:K}$ umfasst alle Topics mit den jeweiligen Wörtern und den gewichten der jeweiligen Wörter. $\theta_{d}$ gibt die Verteilung der Themen zu einem bestimmten Dokument d an.
 
 \emph{was ist eine Dirichlet Verteilung}
 
-\begin{figure}
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=1\textwidth]{images/2-Hauptteil/LDA_Model}
 	\caption[Latent Dirichlet Allocation]{Eigene Adaption der Darstellung von \cite[81]{Blei.2012}. Bei der Abbildung handelt es sich um ein graphisch probabilistisches Modell des LDA }
 \end{figure}
 
-Das zentrale Problem bei dem LDA ist das Berechnen der Verteilungen von $\beta$ und $\theta$. Diese Verteilungen lassen sich nicht berechnen. Sie müssen über eine näherungsweise Inferenz bestimmt werden. Dazu stehen verschiedene Algorithmen zur Verfügung. Zu diesen Algorithmen gehören die Variationsinferenz, wie sie von Blei \cite[1003]{Blei.2003} vorgeschlagen wird oder einer Form der Markov Chain Monte Carlo, dem Gibbs Sampling, dass von Griffiths und Steyvers \cite{Griffiths.2002,Griffiths.2004,Griffiths.2003} auf das LDA angwendet wird
+Das zentrale Problem bei dem LDA ist das Berechnen der Verteilungen von $\phi$ und $\theta$. Diese Verteilungen lassen sich nicht berechnen. Sie müssen über eine näherungsweise Inferenz bestimmt werden. Dazu stehen verschiedene Algorithmen zur Verfügung. Zu diesen Algorithmen gehören die Variationsinferenz, wie sie von Blei \cite[1003]{Blei.2003} vorgeschlagen wird oder einer Form der Markov Chain Monte Carlo, dem Gibbs Sampling, dass von Griffiths und Steyvers \cite{Griffiths.2002,Griffiths.2004,Griffiths.2003} auf das LDA angwendet wird
 Hier könnte ich die einzelnen Inferenz noch näher beschreiben.
 \\Essentiell für die Verwendung eines bestimmten Topic Models ist die Qualität der Ergebnisse. Für die Überprüfung der Qualität gibt es verschiedene Verfahren. Ein Verfahren umfasst die Analyse von Topics mit Hilfe von Kennzahlen, wie sie in Wallach et al. \cite{Wallach.2009} vorgestellt wird. %nachteil des Verfahrens
 Eine andere Herangehensweise an die Evaluation von Topic Models stellt Chang et al. vor. Das vorgestellte Verfahren misst die Qualität von Topic Models in zwei Dimensionen. Die erste Dimension ist die Qualität der Topics an sich. Gemessen wird dies, indem überprüft wird, ob alle Wörter die eine hohe Wahrscheinlichkeit in einem Topic erhalten haben auch dem daraus folgenden Thema zugehören. Die zweite Dimension überprüft, ob die gefundenen Themen eines Dokuments mit dem von einer Person empfundenen Sinn übereinstimmen. Verglichen wurden das probabilistic latent semantic indexing (pLSI), das latent Dirichlet allocation (LDA)und das correlated topic model (CTM)\cite{Blei.2006}. Das Ergebnis der qualitativen Studie war, dass das LDA model die genauesten Ergebnisse liefert. 
@@ -43,9 +43,9 @@ Da Topic Models eine Zusammenfassung des Korpus darstellen, muss sich auch die v
 \label{sec:graphische_darstellung}
 
 Zunächst sollen jedoch Möglichkeiten die Daten direkt, ohne eine weitere Aufbereitung mit Hilfe von Standarddiagrammen dargestellt werden. Mit Standarddiagrammen wird hier auf die gängigen Darstellungsformen für statistische Daten, wie sie in den Python Softwarebibliotheken matplotlib\footnote{http://matplotlib.org}, seaborn\footnote{https://web.stanford.edu/~mwaskom/software/seaborn/index.html} oder prettyplotlib\footnote{http://blog.olgabotvinnik.com/prettyplotlib/} zu finden sind. Wobei Seaborn und prettyplotlib auf matplotlib aufbauen. 
-\\Bei $\beta$ und $\Theta$ handelt es sich jeweils um Matrizen, in den die Werte für die Wahrscheinlichkeit der Wörter und den Anteil der Themen vorkommen. Die Grafik in Abbildung 2.2 gibt Aufschluss wie diese Matrizen bei dem LDA Topic Modell in Verbindung stehen.
+\\Bei $\phi$ und $\Theta$ handelt es sich jeweils um Matrizen, in den die Werte für die Wahrscheinlichkeit der Wörter und den Anteil der Themen vorkommen. Die Grafik in Abbildung 2.2 gibt Aufschluss wie diese Matrizen bei dem LDA Topic Modell in Verbindung stehen.
 
-\begin{figure}
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=1\textwidth]{images/2-Hauptteil/matrix_factorization}
 	\caption[Matrix Zerlegung bei einem LDA Topic Modell]{Matrix Zerlegung bei einem LDA Topic Modell}
@@ -53,13 +53,13 @@ Zunächst sollen jedoch Möglichkeiten die Daten direkt, ohne eine weitere Aufbere
 
 Da es sich bei beiden Dimensionen um Matrizen handelt, kommt für die Darstellung der Werte nur eine Form in Frage, die alle Werte dieser Matrix darstellen kann. Eine Darstellungsform, die diese Kriterien erfüllt ist die Heatmap. Bei einer Heatmap werden auf der x-Achse oder der y-Achse die Zeilen beziehungsweise die Spalten abgetragen.  Die Farbe des Feldes an einer beliebigen Stelle kodiert den Wert, des x/y Paares der Matrix. Ein Beispiel für eine solche Heatmap ist in Abbildung 2.3 aufgeführt. Das Beispiel wurde mit der seaborn Bibliothek und einem Musterskript, dass auf der Webseite\footnote{https://web.stanford.edu/~mwaskom/software/seaborn/examples/many\_pairwise\_correlations.html}  zur Verfügung gestellt wurde erstellt.
 
-\begin{figure}
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.75\textwidth]{images/2-Hauptteil/Heatmap_example}
 	\caption[Beispiel einer Heatmap]{Beispiel einer Heatmap}
 \end{figure}
 
-In dieser Abbildung sind die Achsen jeweils mit den Buchstaben von A bis Z beschriftet. Möchte man eine der Verteilung in einer solchen Heatmap darstellen, muss man zunächst festlegen auf welcher Achse die Zeile bzw. die Spalte abgetragen wird. Anschaulich wird das, wenn man es an dem Beispiel $\Theta$ darstellt. In der Matrix von $\Theta$ werden die Dokumente des Korpus in den Spalten und die Topics in den Zeilen dargestellt. In der Matrix ist der jeweilige Anteil des Topics am Dokument. \emph{ist der nicht in Summe 1?} Bei dieser Konstellation wird ein Problem mit dieser Darstellungsform ersichtlich. Für große Corpora, mit einer hohen Anzahl an Dokumenten wird diese Darstellungsform schnell unübersichtlich. Dies gilt ebenfalls für die Darstellung von $\beta$, da die Matrix das gesamte Vokabular aller Dokumente umfasst. Dadurch wird  die Darstellung schon für kleinere Textkörper unübersichtlich. 
+In dieser Abbildung sind die Achsen jeweils mit den Buchstaben von A bis Z beschriftet. Möchte man eine der Verteilung in einer solchen Heatmap darstellen, muss man zunächst festlegen auf welcher Achse die Zeile bzw. die Spalte abgetragen wird. Anschaulich wird das, wenn man es an dem Beispiel $\Theta$ darstellt. In der Matrix von $\Theta$ werden die Dokumente des Korpus in den Spalten und die Topics in den Zeilen dargestellt. In der Matrix ist der jeweilige Anteil des Topics am Dokument. \emph{ist der nicht in Summe 1?} Bei dieser Konstellation wird ein Problem mit dieser Darstellungsform ersichtlich. Für große Corpora, mit einer hohen Anzahl an Dokumenten wird diese Darstellungsform schnell unübersichtlich. Dies gilt ebenfalls für die Darstellung von $\phi$, da die Matrix das gesamte Vokabular aller Dokumente umfasst. Dadurch wird  die Darstellung schon für kleinere Textkörper unübersichtlich. 
 \\Diese Form der Darstellung gibt jedoch nur Auskunft über die Zusammensetzung der Themen bzw. der Dokumente. Eine Analyse einer höher aggregierten Ebene des Korpus ist dadurch nicht möglich. Um eine solche Analyse zu ermöglichen wird eine andere Form der Darstellung benötigt. 
 Dafür bietet sich ein Netzwerk an, dass die Verbindungen im Textkorpus darstellt. 
 \\Ein Netzwerk besteht aus Knoten und Kanten. Jeder Knoten stellt ein Objekt im Netzwerk dar. Die Kanten verbinden die Knoten und bilden das Netz zwischen den Knoten. Über eine Gewichtung können Kanten auch die Beziehung zwischen zwei Knoten näher beschreiben. So eine Gewichtung kann auf verschiedene Weisen in einem Netzwerk dargestellt werden. Durch eine dicke oder eine sehr kurze Kante zwischen zwei Knoten kann eine besonders enge Verbindung der Knoten angedeutet werden\cite[9 ff.]{Golbeck.2013}. \emph{Hier könnte evt. noch etwas zur Repräsentation von Netzwerken stehen}
@@ -67,7 +67,7 @@ Dafür bietet sich ein Netzwerk an, dass die Verbindungen im Textkorpus darstellt
 
 Im folgenden erfolgt die Beschreibung des Ablaufs, wie aus einem Topic Model mit Hilfe von Tethne ein Netzwerk erstellt werden kann.\\ Eine Beschreibung wie ein Netzwerk aus einem Topic Modell erstellt werden kann findet sich in einem Tutorial auf der Webseite von tethne. Abbildung 2.4 zeigt ein semanisches Netzwerk. Bei diesem Netzwerk wurden die Dokumente eines Korpus anhand ihrer Topics verbunden. die Stärke der Linie zwischen den Knoten gibt an 
 
-\begin{figure}
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=1\textwidth]{images/2-Hauptteil/semantic_network}
 	\caption[Beispiel eines Netzwerks]{Beispiel eines Netzwerks}
@@ -126,7 +126,7 @@ Das LDAvis Verfahren ist die Weiterentwicklung von Systemen, die bereits zur Vis
 Die rechte und die linke Seite sind verbunden und interaktiv. Wählt man ein Topic auf der linken Seite aus, erhält man die zugehörigen Wörter auf der rechten Seite. Umgekehrt erhält man bei der Auswahl eines Wortes auf der rechten Seite dessen Verteilung über die Themen auf der linken Seite.
 \\Das LDAvis System implementiert eine neue Methode um die nützlichsten Wörter für die Interpretation zu finden und zu sortieren. Die Autoren stellen eine Kennzahl für die Wörter vor, die Sie die Relevanz des Wortes nennen.\cite[63]{Sievert.2014} 
 
-\begin{figure}
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=1\textwidth]{images/2-Hauptteil/LDAvis_example}
 	\caption[Beispiel für das LDAvis]{Abbildung des LDAvis: 	Die Grafik ist dem Beispiel auf der Webseite				\footnote{https://cpsievert.github.io/LDAvis/reviews/		vis/} des LDAvis entnommen. Mit \#topic=k\&lambda=l			\&term=s lässt sich ein Wert für das Topic, lambda und 		den Term festlegen}
@@ -185,80 +185,51 @@ Alternativ dazu lässt sich das ganze in Python realisieren.
 \subsection{Topic Browser}
 \label{sec:Topic Browser}
 
-Darstellung und zugriff auf den Korpus durch die einzelnen Topics. Speziell die Verbindung von Topic, Dokument und den verwandten Topics. 
-
 Auch wenn diese Werkzeuge hilfreich sind, wenn man eine Sammlung von Texten durcharbeiten möchte, suchen wir eine kompaktere Visualisierung, mit einem Fokus auf dem schnellen und einfachen verstehen von einzelnen Topics ohne zwangsläufig die Dokumente darzustellen\cite[65]{Sievert.2014}
 
-Zusammenfassung des Artikels
-\begin{enumerate}
-	\item Einleitung
-		\begin{itemize}
-			\item Das Verstehen und Navigieren durch große 				Dokumente ist eine wichtige Aktivität in vielen 			Bereichen
-			\item Umfangreiche Dokumente lassen sich nur 				schwer von Hand organisieren, weshalb eine 					Automatisierung des Prozesses nötig ist.
-			\item Topic Model Algorithmen finden unbekannte 			Themenstrukturen in Dokumenten. Das Ergebnis 				der Topic Models ist allerdings nur unter hohem 			Aufwand analysierbar, da die Ergebnisse in Form 			von Zahlen vorliegen
-			\item Wir schlagen ein angepasstes Topic Model 				vor, um einen Corpus zu organisieren, 						visualisieren, zusammmenzufassen und mit ihm zu 			interagieren.
-			\item Die entdeckte Struktur legt Beziehungen 				offen, die zu Interaktionen in der 							Visualisierung führen
-			\item Die Ziele sind daher: Den Corpus 						zusammmenzufassen, Beziehungen zwischen Inhalt 				und Zusammenfassungen aufzudecken und 						Beziehungen im Inhalt aufzudecken
-		\end{itemize}				
+Topic Models lassen sich darstellen, indem sie verwendet werden um einen Korpus zu organisieren, zusammenfassen, darzustellen und mit ihm zu interagieren. Für diese Art der Darstellung eines Korpus finden sich einige Beispiele im Internet. Diese unterscheiden sich vor allem in dem Aufbau der Visualisierung. \emph{Beispiele für Topic Browser.} Einer dieser Topic Browser wurde im Artikel von Chaney und Blei vorgestellt. Die Ziele dieser Darstellung sind das Zusammenfassen des Korpus, aufdecken der Beziehungen zwischen dem Inhalt und den Zusammenfassungen, sowie das Aufdecken von Beziehungen innerhalb des Inhalts. Die Darstellung verwendet sowohl die Variablen $\phi_k$ und $\theta_d$ des Topic Models als auch die Metadaten des Korpus. Bei $\phi_k$ handelt es sich um die Verteilung der Wörter über ein Topic $k$ und bei $\theta_d$ handelt es sich um die Verteilung der Topics über ein Dokument $d$.\\Der Topic Browser besteht aus drei verschiedenen Ansichten. Zusammengefasst ergeben diese Ansichten den Navigator mit dem der Korpus anhand der Topic Models analysiert werden kann. 
+Der Navigator besitzt zwei Hauptseiten: Auf der einen werden die Topics dargestellt und auf der anderen die Dokumente. Des weiteren gibt es eine Übersichtsseite, auf der alle Topics des Korpus abgebildet werden. Sie dient als Ausgangspunkt für das Browsen durch den Korpus. Verlinkungen auf den jeweiligen Ansichten ermöglichen eine interaktive Analyse des Korpus. Im folgenden werden die einzelnen Ansichten und ihre Elemente dargestellt. Bei den Ansichten handelt es sich um die Topic Seite, die Dokumenten Seite und die Übersichtsseite.
 
-	\item In Verbindung stehende Literatur
-		\begin{itemize}
-			
-			\item Um den Corpus als ganzes zu verstehen 				bieten sich folgende Ansätze an: Exemplar-based 			Visualization, der ThemeRiver und der 						FacetAtlas
-			\item Die von uns entwickelte Visualisierung 				bietet eine kompakte Zusammenfassung des Corpus 			und Verbindungen zwischen der Zusammenfassung 				und den individuellen Dokumenten
-			\item Vorausgehende Forschung zu Topic Models 				fokussierte sich auf die Verbesserung der 					Algorithmen und bedienten sich zur Darstellung 				an Browsern.
-			\item Diese Browser heben Topics hervor und 				beachten die Dokumente nur wenig.
-		\end{itemize}		
-	\item Probabilistic Topic Models
-		\begin{itemize}
-			\item Der Ansatz beschränkt sich auf dne latent 			Dirichlet allocation (LDA) Algorithmus, einem 				der einfachsten probabilistischen topic model. 
-			\item Der LDA Algorithmus zerlegt eine Menge an 			Dokumenten in Topics und stellt jedes Dokument 				mit einem gewichteten subset der Topics dar. 
-			\item Grober Algorithmus des LDA
-		\end{itemize} 
+\begin{figure}[htbp]
+\centering
+\subfloat[Erste Abbildung]{\includegraphics[width=1\textwidth]{images/2-Hauptteil/tmv_overview}}
 
-\item Visualisierung eines Topic Models
-		\begin{itemize}
+\subfloat[Zweite Abbildung]{\includegraphics[width=1\textwidth]{images/2-Hauptteil/tmv_topic}}
 
-			\item Die Visualisierung verwendet sowohl die 				originalen Daten des Corpus als auch die 					abgeleiteten Variablen der Topic Model.
-			\item Bei den Topic Model Variablen handelt es 				sich um die Topics beta k, die jeweils eine 				Verteilung über das Vokabular darstellen und 				das Verhältnis der Topics, eine für jedes 					Dokument, welche eine Verteilung über die 					Topics ist.
-		\end{itemize} 
-\item Visualisieren der Elemente des Topic Models
-	\begin{itemize}
+\subfloat[Dritte Abbildung] {\includegraphics[width=1\textwidth]{images/2-Hauptteil/tmv_document}}
 
-		\item Der Navigator besitzt zwei Hauptseiten: eine 			für die Darstellung der entdeckten Topics und eine 			andere für die Dokumente. Des weiteren gibt es eine 		Übersichtsseite, die die Struktur des Corpus 				darstellt.
-	\end{itemize}
-\begin{enumerate}
+\caption[Ansicht Overview Seite, Topic Seite, Dokument Seite]{Die drei Ansichten des Topic Browser am Beispiel eines Topic Models zu Wikipedia. Die Ansichten stammen von Webseite des Beispiels des Papers}
 
-\item Topic Pages
-\begin{itemize}
-\item Topics fassen den Corpus zusammen. Im Output eines Inferenz Algorithmus sind Sie die Wahrscheinlichkeitsverteilung über das Vokabular. 
-\item In dieser Darstellung werden die Wörter in einer Liste auf der linken Seite dargestellt, wobei das wahrscheinlichste Wort an erster Stelle steht. Geordnet nach ihrer topic term probability
-\item In der mittleren Spalte ist eine Liste an Dokumenten, die dieses Topic umfassen, geordnet nach dem Verhältnis der Topics. Die Titel enthalten eine Verlinkung zu den entsprechenden Dokumenten
-\item Verwandte Topics werden in der rechten Spalte aufgeführt. Geordnet nach ihrer pairwise topic dissimilarity score. Siehe Ausdruck. Diese Kennzahl findet Topics mit einer ähnlichen Verteilung.
-\end{itemize}	
+\end{figure} 
+
+Die Topic Seite besteht aus drei Spalten. In der linken Spalte befindet sich eine Liste mit den häufigsten Wörter der Verteilung zu dem Topic. Die ersten drei dieser Wörter werden als der Name in der Überschrift dargestellt.\\In der mittleren Spalte ist eine Liste mit Dokumenten, die mit diesem Topic in Verbindung gebracht werden. Sie werden anhand des Anteils des Themas $k$ an dem Dokument $d$ geordnet. Die Werte dafür stammen aus der Variablen $\theta_{dk}$, die die Verteilung der Anteile der Themen an den Dokumenten umfasst. \\ Die rechte Spalte umfasst alle Topics, die mit dem ausgewählten Topic in Verbindung gebracht werden können. Dazu wird eine der Unterschied zwischen zwei Topics bestimmt.
+
+\begin{equation}
+\xi_{ij} = \sum_{v \in V} 1_{\mathbb{R}_{\neq 0}}\left(\phi_{iv}\right)1_{\mathbb{R}_{\neq0}}\left(\phi_{jv}\right)\mid log\left(\phi_{iv}\right)- log\left(\phi_{jv}\right)\mid
+\end{equation}
+
+Bei dem Ausdruck $1_{\mathbb{R}_{\neq 0}}\left(\phi_{iv}\right)$ handelt es sich um eine Indikatorfunktion, die für $\phi_{iv} \in \mathbb{R}_{\neq 0}$ gleich 1 ist und sonst gleich 0. In Verbindung mit der durchschnittlichen logarithmierten Wahrscheinlichkeit, findet die Funktion Topics mit einer ähnlichen Verteilung. 
 	
-\item Document Pages
-\begin{itemize}
-\item Die Dokumenten Seiten stellen den originalen Corpus dar. Dort werden die Dokumente und die topics, die das Dokument darstellt, geordnet nach dem Verhältnis der topics. 
-\item Die Dokumente werden auch mit ähnlichen Dokumenten verbunden. Dazu wird eine Kennzahl ähnlich der pairwise dissimilarity score berechnet. Allerdings wird das Verhältnis der Topics als Grundlage für die Berechnung verwendet. Diese Kennzahl gibt Auskunft, wie ähnlich sich zwei Dokumente sind. 
-\end{itemize}		
-		 
-\item Overview Pages
-\begin{itemize}
-\item Die Overview Pages sind der Einstiegspunkt zur Erkundung des Corpus. Auf der Seite werden die Topics anhand ihrer Häufigkeit im Corpus dargestellt. Die Häufigkeit eines Topics ist die Summe aller Verhältnisse in allen Dokumenten. 
-\end{itemize}		
-\end{enumerate}
 
-\item Implementierung 
-\begin{itemize}
-\item Um die Methode für die Visualisierung zu nutzen sind drei Schritte nötig.
+Die Dokument Seiten stellen die originalen Dokumente des Korpus dar. Wie die Topics Seiten ist auch diese Ansicht in drei Spalten gegliedert. In der linken Spalte wird die Verteilung der Topics über das Dokument abgebildet. Die Sortierung erfolgt in absteigender Reihenfolge. Das Topic mit dem höchsten Anteil am Dokument steht oben in der Liste. Der Text des Dokuments wird in der mittleren Spalte abgetragen. 
+Ähnliche Dokumente finden sich in der rechten Spalte des Dokuments. Wie ähnlich sich zwei Dokumente sind wird mit folgender Formel bestimmt. $\sigma_{ij}$ sagt aus, dass sich zwei Dokumente ähnlich sind, wenn sie eine ähnliche Kombination an Topics haben. 
+
+\begin{equation}
+\sigma_{ij} = \sum_{k \in K} 1_{\mathbb{R}_{\neq 0}}\left(\theta_{ik}\right)1_{\mathbb{R}_{\neq0}}\left(\theta_{jk}\right)\mid log\left(\theta_{ik}\right)- log\left(\theta_{jk}\right)\mid
+\end{equation}
+
+Die Overview Seiten sind der Einstiegspunkt zur Erkundung des Corpus. Auf der Seite werden die Topics anhand ihrer Häufigkeit im Corpus dargestellt. Das häufigste Topic steht an erster Stelle. Die Größe des Balken ist proportional zu der Häufigkeit des Topics. Die Häufigkeit eines Topics ist die Summe aller Anteile eines Topics in allen Dokumenten.  
+
+\begin{equation}
+p_k = \sum_{d \in D} \theta_{dk}
+\end{equation}	
+
+Um die Methode für die Visualisierung zu nutzen sind drei Schritte notwendig.
 \begin{enumerate}
 \item Den LDA Algorithmus auf einen Corpus anwenden um die Wahrscheinlichkeiten der versteckten Variablen zu erhalten. 
 \item Eine Datenbank erstellen
 \item Webseiten erstellen um durch den Corpus zu navigieren. 
 \end{enumerate}	
-\end{itemize}
-\end{enumerate}
 
 \chapter{Anwendung}
 \label{sec:Anwendung}
@@ -281,7 +252,7 @@ Da es sich dabei nicht um den Schwerpunkt der Arbeit handelt verwende Ich das Be
 Eine vergleichbares Projekt von Mimno hat den Wikipedia Korpus in 500 Topics aufgeteilt. 
 
 Die Ergebnisse meines Topic Models
-\newpage
+
 
 \section{Visualisierung des Topic Models}
 \label{sec:visualisierung_topicmodels}
