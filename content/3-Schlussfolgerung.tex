@@ -1,15 +1,11 @@
 \chapter{Schlussfolgerung}
 \label{sec:schlussfolgerung}
 
-In der Schlussfolgerung sollten folgende Punkte deutlich werden:
-\begin{itemize}
-	\item die Themenstellung
-	\item	der gewählte Ansatz
-	\item	die Eregbnisse der Arbeit
-	\item eine kritische Stellungnahme/Einschätzung: Darstellung von Inhalt mit Hilfe von Topic Models im Sinne eines Empfehlungssystem.
-	\item nächste Schritte
-	
-	
-\end{itemize}
+Die Visualisierung von Topic Models kann mit verschiedenen Verfahren realisiert werden. Um die Problemstellung bei der Visualisierung und die Eignung der verschiedenen Verfahren zu überprüfen, wurden das LDA Modell und seine Dimensionen beschrieben. Im Anschluss wurden Verfahren beschrieben mit denen sich die Dimensionen des LDA Modells darstellen lassen. Dabei wurde auf statische Grafiken, wie Heatmaps und Netzwerke und auf interaktive Darstellungen, wie das LDAvis System und den Topic Browser eingegangen. Die Erstellung eines Topic Models zu dem 20Newsgroup Datensatz und die Visualisierung des Topic Models mit einer Heatmap und dem LDAvis Verfahren ergab die folgende Einsichten in die Problemstellungen bei der Visualisierung von Topic Models:
+\\Die Visualisierung mit einer Heatmap eignet sich nur für Topic Models von kleinen Sammlungen an Dokumenten oder für die Ausschnittsweise Darstellung größerer Topic Models. Netzewerke werden mit zunehmender Größe des Topic Models  unübersichtlich. Aufgrund der Fülle an Informationen die ein Topic Model bereithält ist eine interaktive Darstellung nötig. Die Wahl der richtigen interaktiven Darstellung hängt von dem Ziel, das mit dem Erstellen des Topic Models verfolgt wird, ab. Ist das Ziel eine große Sammlung an Texten über ihre latenten Themen zugänglich zu machen, eignet sich dafür ein Topic Browser. Soll die thematische Struktur eines Korpus analysiert werden, bietet sich die Verwendung des LDAvis Systems an. 
+\\Die Qualität des verwendeten Vokabulars entscheidet über die Qualität des Topic Models und damit auch über die Aussagekraft der Visualisierung. Im vorliegendem Fall enthielten die Topics noch Wörter ohne Aussagekraft. Das führt zu ungenauen Topics. Betrachtet man nun ein Kluster an Topics in der Darstellung mit dem LDAvis System, kann dem Kluster kein eindeutiger Themenbereich zugeteilt werden. 
+Die Abbildung aller hier beschriebenen Verfahren wird für große Topic Modelle unübersichtlich. Für die Heatmap ist das im Vergleich schon bei einer relativ geringen Anzahl an Topics der Fall. Das Netzwerk und das LDAvis System kommen mit einer größeren Anzahl an Topics zurecht. Aufgrund der Unterteilung des Topic Browsers in mehrere Ansichten und dem Abbilden einer Teilmenge an Topics und Wörtern kommt der Topic Browser auch mit sehr großen Dokumenten zurecht. 
 
-Hinweis: Die Schlussfolgerung sollte mit der Zusammenfassung bzw. dem Abstract und der Einleitung abgeglichen werden. Es sollte immer eine Zusammenfassung der wesentlichen Erkenntnisse der eigenen Arbeit sein, die den Forschungsbeitrag darstellt. Der Umfang der Schlussfolge-rung sollte ähnlich wie die Einleitung ca. 5\% der gesamten Arbeit betragen.
+%Anwendung weiterer Verfahren, die hier nur am Rande angesprochen worden sind
+%Verwendung von Metadaten
+

@@ -4,4 +4,38 @@
 
 \section{Materialien} 
 \label{sec:materialien}
-Fusce vitae quam eu lacus pulvinar vulputate. Suspendisse potenti. Aliquam imperdiet ornare nibh. Cras molestie tortor non erat. Donec dapibus diam sed mauris laoreet volutpat. Sed at ante id nibh consectetuer convallis. Suspendisse diam tortor, lobortis eget, porttitor sed, molestie sed, nisl.
+
+
+\begin{table}[hp]
+\tablestyle
+\caption[Beispiele für Topic Browser]{\label{tab:topic_browser}Eine Liste mit Links zu weiteren Topic Browsern}
+	\input{tables/2-Hauptteil/topic_browser}
+
+\end{table}
+
+
+\begin{figure}[hp]
+	\inputminted[breaklines=true, lastline=40]{Python}{code/2-Hauptteil/LDA_total.py}
+	\caption[LDA Code]{Code Beispiel für die Erstellung des Topic Models - Teil 1}
+\end{figure}
+
+\begin{figure}[h]
+	\inputminted[breaklines=true, firstline=41, lastline=80]{Python}{code/2-Hauptteil/LDA_total.py}
+	\caption[\label{code:LDA} LDA Code]{Code Beispiel für die Erstellung des Topic Models - Teil 2}
+\end{figure}
+
+
+\begin{figure}[hp]
+	\inputminted[breaklines=true, firstline=81]{Python}{code/2-Hauptteil/LDA_total.py}
+	\caption[LDA Code]{Code Beispiel für die Erstellung des Topic Models - Teil 3}
+\end{figure}
+
+\begin{figure}[hp]
+	\inputminted{Python}{code/2-Hauptteil/heatmap_first_50.py}
+	\caption[Der Code für die Heatmap]{\label{code:heatmap_50_full} Der Code für die Erstellung der Heatmap}
+\end{figure}
+
+\begin{figure}[hp]
+	\inputminted{Python}{code/2-Hauptteil/ldavis.py}
+	\caption[Visualisierung mit LDAvis]{\label{code:LDAvis} Der Code für die Visualisierung des Topics Models mit LDAvis}
+\end{figure}

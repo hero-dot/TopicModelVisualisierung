@@ -1,18 +1,6 @@
 \chapter{Einleitung}
 
-\paragraph{Einführung in die Problemstellung} 
-\label{sec:Einführung in die Problemstellung}
-Durch das Internet sind immer mehr Informationen vor allem in Textform verfügbar. Um diese Informationen zu verarbeiten, verwendet man Verfahren des Topic Modeling. Das Ergebnis dieser Verfahren sind Topic Models. Bei ihnen handelt es sich um eine statistische Auswertung von Textkörpern. In  der Literatur werden unterschiedliche Verfahren dazu beschrieben.
-
-\paragraph{Motivation und Herleitung des Themas}
-\label{sec:Motivation und Herleitung des Themas}
-Topic Models lassen sich in der Form, wie sie von den verschiedenen Verfahren nur schwer interpretieren und besitzen unter Umständen Topics ohne Aussagegehalt. 
-
-\paragraph{Aufbau der Arbeit}
-\label{sec:Aufbau der Arbeit}
-Ziel dieser Arbeit ist es, Methoden darzustellen, die Topic Models visualisieren können und mit deren Hilfe man bestimmte Probleme mit Topic Models beseitigen kann. 
-Dazu werden im ersten Teil die gängigen Verfahren dargestellt, mit deren Hilfe die Topic Models erstellt werden. Im zweiten Teil wird anschließend auf die unterschiedlichen Verfahren zur Visualisierung von Topic Models eingegangen. Das Augenmerk soll dabei auf den unterschiedlichen Perspektiven liegen, die mit dem jeweiligen Verfahren dargestellt wird. Der vierte Teil umfasst einen Vergleich der Verfahren und eine Diskussion ihrer Vor- und Nachteile. Abschließend erfolgt noch 
-eine beispielhafte Anwendung der Verfahren, die sich als die Verfahren mit den meisten Vorzügen herausgestellt haben. Dazu wird ein Test Corpus erstellt und auf diesen werden die jeweiligen Verfahren angewendet.   
-
-
-
+Angesichts der zunehmenden Vernetzung und Digitalisierung durch das Internet wächst die verfügbare Datenmenge stetig an. Ein großer Teil dieser Informationen sind Texte oder Dokumente, die Informationen in geschriebener Form enthalten, wie beispielsweise Webseiten. Für Menschen ist eine Analyse dieser Dokumente, ohne technische Hilfe nur schwer möglich. Eine Möglichkeit versteckte Strukturen in diesen Dokumenten sichtbar zu machen ist die Erstellung von Topic Models. \\Ein weit verbreitetes und sehr beliebtes Verfahren für die Erstellung eines Topic Models ist die Latent Dirichlet Allocation. Die Idee hinter dem \ac{LDA} ist, dass sich Dokumente aus verschiedenen Themen zusammensetzen. Die Latent Dirichlet Allocation ist ein statistisches Modell, das die thematische Zusammensetzung für eine Auswahl an Dokumenten abbilden kann, wobei die Wörter der Dokumente das einzige beobachtbare Merkmal im Modell sind. Die Struktur der Themen ist versteckt\cite[78f.]{Blei.2012}. Mit einem Inferenzverfahren lässt sich diese versteckte Struktur näherungsweise bestimmen. Das Ergebnis sind Verteilungen der Wörter für jedes Thema, der Sammlung der Dokumente. Bei den Verteilungen handelt es sich um Tabellen mit numerischen Werten, die eine weitere Analyse der Zahlen voraussetzt, um den Sinn in den Topics zu finden. 
+Ziel dieser Arbeit ist es, Methoden darzustellen, die Topic Models visualisieren können. 
+\\Dazu erfolgt im Grundlagenteil eine Beschreibung der Latent Dirichlet Allocation. Dort wird das statistische Modell, die Verfahren zur Inferenz und das Ergebnis der Inferenz, die Topic Wort Verteilung erläutert. Anschließend wird die visuelle Darstellung der Topic Models mit statischen Grafiken beschrieben. Neben der Darstellung der Topic Models mit den statischen Grafiken werden Verfahren zur interaktiven Darstellung, dem LDAvis \cite{Sievert.2014} und einem Topic Browser \cite{Chaney.2012} vorgestellt.
+Im Anwendungsteil der Arbeit wird ein Topic Model zu dem 20Newsgroup\footnote{\url{http://qwone.com/~jason/20Newsgroups/}} Datensatz erstellt. Das Topic Model wird mit einer statischen Grafik, einer Heatmap und mit dem LDAvis System dargestellt.
